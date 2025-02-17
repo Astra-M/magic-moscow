@@ -20,48 +20,13 @@
   flex-direction: column;
   min-height: 100vh;
 }
-````````````````````````````````````````````````````````` .header {
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
-  width: 100%;
-}
-.header__container {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__logo {
-}
-.header__logo-img {
-  max-height: 60px;
-}
-.header__navigation {
-  display: flex;
-  align-items: center;
-  /* gap: 75px; */
-}
-.header__menu {
-}
-.menu {
-}
-.menu__body {
-  display: flex;
-  align-items: center;
-  gap: 45px;
-}
-.menu__item {
-  list-style: none;
-}
-.menu__link {
-}
 
-.cover {
+
+.header {
   height: 90vh;
   display: flex;
-  /* justify-content: space-between; */
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: flex-start;
   align-items: center;
   overflow: hidden;
   background-image: url("./images/Москва зимой.jpg");
@@ -71,25 +36,54 @@
   position: relative;
   z-index: 0;
 }
-.cover::before {
+.header::before {
   content: "";
   position: absolute;
   inset: 0;
   background-color: rgb(0 0 0 / 0.5);
   z-index: -1;
 }
+.logo {
+  padding: 20px;
+  display: flex; 
+  /* align-self: center; */
 
-.cover__info {
-  width: 70%;
-
+}
+.logo__link{
+}
+.logo__img {
+  max-height: 60px;
+}
+.header__navigation {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  align-self: center;
+  align-items: center;  
 }
 
-.cover__title {
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+.menu__item {
+  list-style: none;
+}
+.menu__link {
+  color:white;
+  text-decoration: none;
+}
+
+.intro {
+  flex: 1; 
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+   justify-content: center; 
+
+  
+}
+
+.intro__title {
   max-width: 100%;
   font-size: 35px;
   font-weight: 400;
@@ -101,13 +95,12 @@
   align-self: self-start;
 }
 @media (min-width: 768px) {
-  .cover__title {
+  .intro__title {
     font-size: 45px;
   }
 }
 
-.cover__subtitle {
-  /* font-size: 24px; */
+.intro__subtitle {
   font-size: 20px;
   color: #fff;
   font-weight: 400;
@@ -118,7 +111,7 @@
   padding: 30px 0px 40px 0px;
 }
 @media (min-width: 768px) {
-  .cover__subtitle {
+  .intro__subtitle {
     font-size: 24px;
   }
 }
@@ -151,6 +144,10 @@
   border-color: rgb(151, 8, 16);
   align-self: flex-start;
   margin-top: auto;
+}
+/* Чтобы футер прижался к низу страницы. Оборачиваем всю страницу в блок, делаем его флекс-контейнером, внутрь вкладываем хэдер, мейн и футер. Родителю задаём flex-direction: column чтобы блоки встали друг под другом, а не в ряд, и min-height: 100vh, чтобы он занимал как минимум всю высоту экрана. Мейну задаём flex: 1, и вуаля! Центральный блок страницы будет всегда растягиваться на всё доступное свободное пространство. Из-за этого футер всегда будет прижиматься к нижнему краю страницы. При этом, если контента в мейне будет больше чем на один экран, то он растянется и подстроится, ничего не сломается. */
+.main{
+  flex: 1
 }
 .excursions__list {
   list-style-type: none;
