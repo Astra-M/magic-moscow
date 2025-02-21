@@ -22,10 +22,12 @@
 }
 
 .header {
-  height: 90vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 20px;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
   background-image: url("./images/Москва зимой.jpg");
@@ -34,7 +36,6 @@
   background-repeat: no-repeat;
   position: relative;
   z-index: 0;
-  padding: 20px;
 }
 .header::before {
   content: "";
@@ -43,21 +44,37 @@
   background-color: rgb(0 0 0 / 0.5);
   z-index: -1;
 }
+/* @media (max-width: 805px) {
+  .header {
+    height: 100vh;
+  }
+} */
+
 .header__navigation {
   display: flex;
   align-items: center;
-  max-width: 95%;
+  justify-content: space-between;
+  width: 95%;
   gap: 45px;
 }
 
+/* @media (min-width: 805px) {
+  .header__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+  }
+} */
+
 .burger {
 }
+
 .burger__icon {
-  background-color: red;
   width: 50px;
   height: 40px;
   position: relative;
-  z-index: 20;
+  z-index: 0;
   cursor: pointer;
 }
 
@@ -92,7 +109,7 @@
   bottom: calc(50% - 1px);
 }
 
-@media (min-width: 790px) {
+@media (min-width: 805px) {
   .burger__icon {
     display: none;
   }
@@ -109,11 +126,35 @@
   padding: 0;
   list-style-type: none;
 }
+
 .menu {
+}
+@media (max-width: 805px) {
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(151, 8, 16);
+    display: flex;
+  }
+}
+
+.menu__list {
   display: flex;
   align-items: center;
-  gap: 45px;
+  gap: 40px;
 }
+@media (max-width: 805px) {
+  .menu__list {
+    flex-direction: column;
+    padding: 20px;
+    /* дисплей флекс у родителя и маргин авто у ребенка и центрируется правильно */
+    margin: auto;
+  }
+}
+
 .list-item-reset {
   list-style: none;
 }
@@ -121,18 +162,32 @@
 .link {
   text-decoration: none;
 }
+/* .link:hover { */
+/* text-decoration: underline; */
+/* } */
 /* можно заменить на модификатор ссылки белого цвета */
 .menu__link {
   color: white;
 }
 
+@media (max-width: 805px) {
+  .menu__link {
+    font-size: 30px;
+  }
+}
+
 .intro {
   flex: 1;
-  width: 75%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 550px) {
+  .intro {
+    width: 75%;
+  }
 }
 
 .intro__title {

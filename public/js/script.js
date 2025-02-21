@@ -5,9 +5,13 @@ burger.addEventListener("click", (e) => {
   burger.classList.toggle("burger__icon_active");
   console.log("скрипт выполнен");
 });
+// const menu = document.querySelector(".menu");
 
 // const body = document.body;
-
+// if (menu & burger) {
+//   menu.classList.toggle(".menu_visible");
+//   burger.classList.add(".burger_hidden");
+// }
 // if (menu && menuBtn) {
 // 	menuBtn.addEventListener('click', e => {
 // 		menu.classList.toggle('active')
