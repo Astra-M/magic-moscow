@@ -169,9 +169,9 @@
           </nav>
         </div>
 
-        <section class="intro">
-          <h1 class="intro__title">Авторские экскурсии по Москве</h1>
-          <p class="intro__subtitle">
+        <section class="cover">
+          <h1 class="cover__title">Авторские экскурсии по Москве</h1>
+          <p class="cover__subtitle">
             Душевные прогулки по заповедным улочкам Москвы в теплой компании
             единомышленников
           </p>
@@ -184,41 +184,66 @@
           </a>
         </section>
       </header>
+      <!-- <main class="main-container"> -->
       <main>
+        <section class="intro">
+          <div class="intro__container">
+            <h3 class="title title_color_red intro__title">
+              Бесплатные пешеходные экскурсии по Москве
+            </h3>
+
+            <div class="text-container">
+              <!-- <p class="text excursion-card__text"> -->
+              <p class="text">
+                Любите гулять по Москве и слушать интересные истории о домах и
+                их обитателях?
+              </p>
+              <p class="text">
+                Приглашаем Вас на экскурсии по волшебной Москве в нашей теплой
+                компании!
+              </p>
+              <p class="text">
+                Московская классика и неизведанные маршруты, центральные улицы и
+                скрытые подворотни, дворцы и трущобы - Москва откроется Вам с
+                новой стороны на наших прогулках.
+              </p>
+            </div>
+          </div>
+        </section>
         <section class="excursions">
-          <ul class="excursions__list">
-            <li class="excursions__list-item">
+          <ul class="list-reset">
+            <!-- <ul class="excursions__list"> -->
+            <li class="list-item-reset">
               <article class="excursion-card">
                 <div class="square-container">
-                  <!-- <a href="" class="image-link"> -->
                   <img
                     class="excursion-card__photo"
                     src="./images/Куртизанки и святые_экскурсия.jpg"
                     alt="" />
                 </div>
-                <!-- </a> -->
-
                 <div class="excursion-card__info">
                   <span class="excursion-card__label"
                     >пешеходная экскурсия</span
                   >
-                  <h3 class="excursion-card__title">
+                  <h3 class="title excursion-card__title">
                     Куртизанки и святые на Сретенском холме
                   </h3>
-                  <!-- <div class="text-container"> -->
-                  <p class="excursion-card__text">
-                    Экскурсия-погружение, от которой захватывает дух, вся
-                    построенная на контрастах и противоречиях. Люди московского
-                    дна и православные святые, куртизанки и городовые, цари и
-                    приказчики... Словно цветные узоры калейдоскопа, москвичи
-                    разных эпох предстанут перед нами на этой прогулке.
-                  </p>
-                  <!-- </div> -->
-
+                  <div class="text-container">
+                    <p class="text">
+                      Экскурсия-погружение, от которой захватывает дух, вся
+                      построенная на контрастах и противоречиях.
+                    </p>
+                    <p class="text">
+                      Люди московского дна и православные святые, куртизанки и
+                      городовые, цари и приказчики... Словно цветные узоры
+                      калейдоскопа, москвичи разных эпох предстанут перед нами
+                      на этой прогулке.
+                    </p>
+                  </div>
                   <a
                     href="#"
                     rel="noopener noreferrer"
-                    class="button button_color_red"
+                    class="button button_color_red excursion-card__button"
                     target="_blank">
                     узнать больше
                   </a>
