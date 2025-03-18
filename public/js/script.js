@@ -1,14 +1,17 @@
 const menu = document.querySelector(".menu");
-const burger = document.querySelector(".burger__icon");
+const burger = document.querySelector(".burger");
+// const burger = document.querySelector(".burger__icon");
 const header = document.querySelector(".header");
 const page = document.querySelector(".page");
 
 burger.addEventListener("click", (e) => {
-  burger.classList.toggle("burger__icon_active");
+  burger.classList.toggle("burger_opened");
+  // burger.classList.toggle("burger__icon_active");
   menu.classList.toggle("menu_opened");
-  header.classList.toggle("header_100vh");
+  // menu.classList.toggle("header__navigation_mobile");
+  // header.classList.toggle("header_100vh");
   page.classList.toggle("page_locked");
-    // console.log("скрипт выполнен");
+  // console.log("скрипт выполнен");
 });
 // const menu = document.querySelector(".menu");
 

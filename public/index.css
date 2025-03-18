@@ -46,7 +46,16 @@
   font-size: 85px;
   font-weight: 700;
 }
-
+@media (max-width: 700px) {
+  .h1-title {
+    font-size: 55px;
+  }
+}
+@media (max-width: 400px) {
+  .h1-title {
+    font-size: 50px;
+  }
+}
 .h2-title {
   font-size: 35px;
   font-weight: 500;
@@ -74,8 +83,6 @@
   text-transform: uppercase;
   text-decoration: none;
   width: max-content;
-  /* max-width: 150px;
-  min-width: 80px; */
   cursor: pointer;
 }
 
@@ -133,6 +140,18 @@
   margin: 40px auto 40px;
   width: 15%;
 }
+.border-white {
+  border: 20px solid white;
+}
+
+@media (max-width: 500px) {
+  .border-white {
+    border: none;
+  }
+}
+.box-shadow {
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+}
 .square-container {
   aspect-ratio: 1 / 1; /* Устанавливаем соотношение сторон 1:1 для квадратной формы */
   width: 100%; /* Ширина контейнера может быть адаптивной */
@@ -156,17 +175,9 @@
 }
 
 /* -----------------Конец общих стилей */
+
 .header {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-image: url("./images/Фото Василия Блаженного в цвету.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 100vh;
   position: relative;
   z-index: 0;
 }
@@ -174,14 +185,38 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgb(0 0 0 / 0.2);
-  z-index: -1;
+  background-color: rgb(0 0 0 / 0.4);
+  z-index: 1;
 }
-.header_100vh {
-  height: 100vh;
+.caption {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  font-style: normal;
+  text-align: center;
+  max-width: 80%;
+  margin: 0px;
+  padding: 0px;
 }
 
-.header__navigation {
+@media (max-width: 768px) {
+  .caption {
+    font-size: 20px;
+  }
+}
+.caption_align_left {
+  text-align: left;
+}
+
+.header__caption {
+  color: #fff;
+  padding: 30px 0px 40px 0px;
+  position: relative;
+  z-index: 2;
+}
+
+.navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -190,16 +225,32 @@
   padding: 20px;
   box-sizing: border-box;
 }
-
-.burger {
+@media (max-width: 805px) {
+  .navigation {
+    width: 100%;
+    /* height: 100vh; */
+    position: relative;
+  }
+}
+.header__navigation {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
 }
 
-.burger__icon {
+.burger {
+  position: relative;
   width: 50px;
   height: 40px;
-  position: relative;
-  z-index: 1;
   cursor: pointer;
+  z-index: 1;
+}
+@media (min-width: 805px) {
+  .burger {
+    display: none;
+  }
 }
 
 .burger__line {
@@ -208,8 +259,9 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: white;
   transition: all 0.2s;
+  z-index: 5;
 }
 .burger__line:first-of-type {
   top: 0;
@@ -218,25 +270,17 @@
   top: auto;
   bottom: 0;
 }
-
-.burger__icon_active .burger__line {
+.burger_opened .burger__line {
   transform: scale(0);
 }
 
-.burger__icon_active .burger__line:first-of-type {
+.burger_opened .burger__line:first-of-type {
   transform: rotate(-45deg);
   top: calc(50% - 1px);
 }
-
-.burger__icon_active .burger__line:last-of-type {
+.burger_opened .burger__line:last-of-type {
   transform: rotate(45deg);
   bottom: calc(50% - 1px);
-}
-
-@media (min-width: 805px) {
-  .burger__icon {
-    display: none;
-  }
 }
 
 .logo {
@@ -250,16 +294,13 @@
 
 @media (max-width: 805px) {
   .menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -100%;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(151, 8, 16);
-    /* дисплей флекс у родителя и маргин авто у ребенка, и при скролле меню не уезжает вверх */
-    display: flex;
-    z-index: 0;
-    transition: all 0.2s;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(203, 170, 92, 1);
+    transition: all 0.5s;
   }
 }
 .menu_opened {
@@ -275,13 +316,18 @@
   .menu__list {
     flex-direction: column;
     padding: 20px;
-    /* дисплей флекс у родителя и маргин авто у ребенка, и при скролле меню не уезжает вверх */
-    margin: auto;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* z-index: 6; */
   }
 }
 
 .menu__link {
   color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 805px) {
@@ -304,31 +350,14 @@
   }
 }
 
-.cover__title {
+/* .cover__title {
   color: #fff;
   align-self: self-start;
-}
+} */
 
 @media (max-width: 768px) {
   .cover__title {
     font-size: 55px;
-  }
-}
-
-.cover__subtitle {
-  max-width: 90%;
-  font-size: 20px;
-  color: #fff;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0px;
-  font-style: normal;
-  margin: 0px;
-  padding: 30px 0px 40px 0px;
-}
-@media (min-width: 768px) {
-  .cover__subtitle {
-    font-size: 24px;
   }
 }
 
@@ -428,16 +457,7 @@
 
 .excursions__item {
   display: flex;
-
-  /* flex-wrap: wrap; */
   gap: 30px;
-
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
-  /* grid-template-columns: minmax(300px, 1fr) 2fr; */
-  /* grid-template-rows: minmax(auto, 400px); */
-  /* grid-template-columns: minmax(300px, 30%) 1fr; */
-  /* grid-gap: 20px; */
   border: 1px solid rgb(235, 238, 241);
   padding: 40px;
   box-shadow: 0px 10px 15px 0px rgba(235, 238, 241, 0.5);
@@ -445,14 +465,13 @@
 @media (max-width: 800px) {
   .excursions__item {
     flex-direction: column;
-    /* grid-template-columns: 1fr; */
-    /* grid-template-rows: auto; */
   }
 }
 @media (max-width: 500px) {
   .excursions__item {
     border: none;
     padding: 40px 0 40px 0;
+    box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
   }
 }
 .excursions__item_reverse {
@@ -470,25 +489,19 @@
   padding: 6px 0 30px 0;
 }
 .excursions__image {
-  flex-basis: 50%;
-  /* flex-grow: 1; */
-  /* flex-shrink: 1; */
-  /* flex: 1; */
-  width: 100%;
-  /* min-width: 300px; */
-  /* height: 100%; */
+  width: 50%;
   object-fit: cover;
   object-position: center;
   box-sizing: border-box;
-  border: 20px solid white;
-  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
   aspect-ratio: 3/2;
+  /* border: 20px solid white;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2); */
 }
 
 @media (max-width: 800px) {
   .excursions__image {
     /* aspect-ratio: 3/2; */
-
+    width: 100%;
     max-height: 300px;
   }
 }
@@ -610,21 +623,101 @@
 .swiper-button-next::after {
   color: #fff;
 }
-/* Общие стили:
-Общие стили для структурных блоков страницы */
-/* .flex {
-  display: flex;
-  flex-wrap: wrap;
+
+.excursion-cover {
+  /* position: relative; */
+  width: 100%;
+  height: 80vh;
+}
+.header__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.red {
-  flex-basis: 30%;
-  background-color: red;
-  height: 200px;
+.header__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 90%;
 }
-.green {
-  /* flex-basis: 30%; */
-/* background-color: green;
-  height: 200px;
-  flex-basis: 70%;
-} */
+.header__intro_align_left {
+  align-items: flex-start;
+}
+
+.header__title {
+  width: 100%;
+  color: white;
+  z-index: 1;
+}
+
+.title_align_left {
+  text-align: left;
+}
+
+.overwiew {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 60px 0px;
+  gap: 25px;
+}
+
+@media (max-width: 800px) {
+  .overwiew {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.overwiew__image {
+  width: 50%;
+  border-radius: 3px;
+  object-fit: cover;
+  /* border: 20px solid white; */
+  box-sizing: border-box;
+  /* box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2); */
+}
+
+@media (max-width: 800px) {
+  .overwiew__image {
+    width: 100%;
+    aspect-ratio: 3/2;
+  }
+}
+.overwiew__details {
+  display: flex;
+  gap: 35px;
+  padding: 20px;
+}
+
+.overview__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (max-width: 800px) {
+  .overview__list {
+    gap: 15px;
+  }
+}
+.overview__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.overview__icon {
+  height: 35px;
+}
+.overview__text {
+}
