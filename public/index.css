@@ -142,6 +142,7 @@
 }
 .border-white {
   border: 20px solid white;
+  border-radius: 5px;
 }
 
 @media (max-width: 500px) {
@@ -494,8 +495,6 @@
   object-position: center;
   box-sizing: border-box;
   aspect-ratio: 3/2;
-  /* border: 20px solid white;
-  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2); */
 }
 
 @media (max-width: 800px) {
@@ -720,4 +719,121 @@
   height: 35px;
 }
 .overview__text {
+}
+
+.description {
+  width: 90%;
+  margin: 0 auto;
+  overflow: visible;
+}
+.description__title {
+  padding: 60px 0;
+  line-height: 1.7;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.description__photos-container {
+  display: flex;
+  padding: 100px 0 200px 0px;
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+/* @media (max-width: 650px) {
+  .description__photos-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 0 60px 0px;
+  }
+} */
+
+.description__photo {
+  object-fit: cover;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  aspect-ratio: 1/1;
+  /* aspect-ratio: 1/1; */
+  /* max-width: 100%; */
+  /* height: auto; */
+  max-height: 400px;
+  /* transition: transform 0.25s; */
+  /* cursor: pointer; */
+}
+/* .description__photo:hover {
+  transform: scale(1.2);
+} */
+
+.description__photo:first-of-type {
+  /* flex-basis: 40%; */
+  width: 40%;
+  top: 50px;
+  left: 0;
+
+  transform: rotate(-10deg) translateY(-20px) translateX(0px);
+
+  z-index: 3;
+  /* aspect-ratio: 1/1; */
+  /* max-height: 400px; */
+}
+
+.description__photo:nth-of-type(2) {
+  width: 50%;
+  /* flex-basis: 60%; */
+  top: 0;
+  /* left: 50%; */
+  transform: rotate(5deg);
+  z-index: 2;
+  aspect-ratio: 3/4;
+  /* aspect-ratio: 3/2; */
+  /* transform: rotate(5deg); */
+}
+.description__photo:last-of-type {
+  /* flex-basis: 40%; */
+  width: 30%;
+  top: 0;
+  right: 0;
+  transform: rotate(15deg) translateY(120px) translateX(30px);
+
+  z-index: 1;
+  /* aspect-ratio: 1/2; */
+  /* aspect-ratio: 2/3; */
+  /* max-height: 400px; */
+}
+/* @media (max-width: 650px) {
+  .description__photo:first-of-type,
+  .description__photo:nth-of-type(2),
+  .description__photo:last-of-type {
+    transform: none; */
+/* aspect-ratio: 1/1; */
+/* }
+} */
+.red {
+  width: 60%;
+  height: 300px;
+  background-color: green;
+  background-image: url("./images/ostojenka_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.blue {
+  width: 60%;
+  height: 300px;
+  background-color: green;
+  background-image: url("./images/ostojenka_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.green {
+  width: 120%;
+  height: 300px;
+  background-color: green;
+  background-image: url("./images/ostojenka_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
