@@ -1,4 +1,11 @@
+:root {
+  --indigo: #2f1893;
+  --fucsia: #e93a7d;
+  --golden: #cbaa5c;
+}
 .page {
+  --main-color: var(--indigo);
+  --accent-color: var(--fucsia);
   background-color: #fff;
   margin: 0 auto;
   padding: 0;
@@ -39,7 +46,7 @@
   padding: 0px;
   line-height: 1.2;
   text-align: center;
-  color: #333333;
+  color: var(--main-color);
   max-width: 100%;
 }
 .h1-title {
@@ -94,12 +101,12 @@
 }
 
 .button_transparent {
-  color: rgba(203, 170, 92, 1);
-  border-color: rgba(203, 170, 92, 1);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .button_filled {
-  background-color: rgba(203, 170, 92, 1);
+  background-color: var(--accent-color);
   color: #fff;
   border: none;
 }
@@ -186,7 +193,9 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgb(0 0 0 / 0.4);
+  background-color: var(--main-color);
+  opacity: 0.4;
+  /* background-color: rgb(0 0 0 / 0.4); */
   z-index: 1;
 }
 .caption {
