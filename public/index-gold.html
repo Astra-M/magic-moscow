@@ -3,29 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Пешеходные экскурсии по Москве | Волшебная Москва</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Базовый SEO -->
+    <title>Бесплатные пешеходные экскурсии по Москве 2025</title>
     <meta
       name="description"
-      content="Открой для себя старую-добрую Москву в компании с увлеченным гидом! Приходи на пешеходные экскурсии по уютным улочкам столицы. Уникальные авторские прогулки. Новый взгляд на классические маршруты. "
+      content="Авторские пешеходные прогулки по Москве с увлеченным гидом – бесплатно и по расписанию. Удобный выбор в каталоге. Лучшие маршруты – тайные подворотни, укромные переулки, непарадные места, городские легенды. Новый взгляд на московскую классику"
     />
+    <!-- Canonical -->
+    <link rel="canonical" href="https://magic-moscow.ru/" />
+    <!-- Open Graph -->
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://magic-moscow.ru/" />
+    <meta property="og:site_name" content="Экскурсии по Москве" />
+    <meta
+      property="og:title"
+      content="Бесплатные пешеходные экскурсии по Москве 2025"
+    />
+    <meta
+      property="og:description"
+      content="Авторские пешеходные прогулки по Москве с увлеченным гидом – бесплатно и по расписанию. Удобный выбор в каталоге. Лучшие маршруты – тайные подворотни, укромные переулки, непарадные места, городские легенды. Новый взгляд на московскую классику"
+    />
+    <!-- Загрузить картинку 1200 на 630, обязательно абсолютный путь! -->
+    <meta
+      property="og:image"
+      content="https://magic-moscow.ru/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
-      rel="stylesheet" /> -->
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet" /> -->
-
+    <!-- Стили -->
     <link
       rel="stylesheet"
       type="text/css"
@@ -33,38 +54,46 @@
     />
     <link rel="stylesheet" href="./index.css" />
 
-    <link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico" />
+    <!-- Фавикон -->
     <link
-      rel="apple-touch-icon"
-      type="image/png"
-      sizes="180x180"
-      href="./images/favicon/apple-touch-icon.png"
+      rel="icon"
+      type="image/x-icon"
+      href="https://magic-moscow.ru/images/favicon/favicon.ico"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon/favicon-32x32.png"
+      href="https://magic-moscow.ru/images/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./images/favicon/favicon-16x16.png"
+      href="https://magic-moscow.ru/images/favicon/favicon-16x16.png"
     />
+    <!-- Apple Touch Icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://magic-moscow.ru/images/favicon/apple-touch-icon.png"
+    />
+    <!-- Иконки для Android -->
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
-      href="./images/favicon/android-chrome-192x192.png"
+      href="https://magic-moscow.ru/images/favicon/android-chrome-192x192.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="512x512"
-      href="./images/favicon/android-chrome-512x512.png"
+      href="https://magic-moscow.ru/images/favicon/android-chrome-512x512.png"
     />
-
+    <!-- Манифест  -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#e93a7d" />
     <!-- Yandex.Metrika counter -->
     <!-- <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -109,6 +138,7 @@
   </head>
 
   <body class="page">
+    <h1 class="text-3xl font-bold underline">Hello world!</h1>
     <div class="page__container">
       <header class="header">
         <div class="navigation header__navigation">
@@ -127,19 +157,28 @@
           <nav class="menu">
             <ul class="menu__list list-reset">
               <li class="list-item-reset">
-                <a href="" class="link menu__link">На главную</a>
+                <a href="/" class="menu__link">
+                  <svg
+                    class="menu__icon"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M8 1L1 7v8h5v-5h4v5h5V7z" />
+                  </svg>
+                </a>
               </li>
               <li class="list-item-reset">
-                <a href="" class="link menu__link">О нас</a>
+                <a href="" class="menu__link">О гиде</a>
               </li>
               <li class="list-item-reset">
-                <a href="" class="link menu__link">Экскурсии</a>
+                <a href="" class="menu__link">Экскурсии</a>
               </li>
               <li class="list-item-reset">
-                <a href="" class="link menu__link">Расписание</a>
+                <a href="" class="menu__link">Расписание</a>
               </li>
               <li class="list-item-reset">
-                <a href="" class="link menu__link">Контакты</a>
+                <a href="" class="menu__link">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -168,66 +207,132 @@
 
       <main>
         <section class="intro">
-          <div class="intro__container">
-            <h3 class="title h3-title">Любите гулять по Москве?</h3>
-            <!-- <hr class="separator"></hr> -->
-            <p class="text intro__text">
-              Приглашаем Вас на экскурсии по волшебной Москве в нашей уютной
-              компании! Московская классика и неизведанные маршруты, центральные
-              улицы и скрытые подворотни, дворцы и трущобы - Москва откроется
-              Вам с новой стороны на наших прогулках.
-            </p>
+          <div
+            class="intro__container flex flex-col items-center justify-center text-center pt-30 pb-30"
+          >
+            <h2
+              class="text-45px font-display font-bold text-indigo-custom mb-15"
+            >
+              Любите прогулки по Москве?
+            </h2>
+
+            <div class="w-80p">
+              <p class="text-lg font-body text-gray-800-custom">
+                Привет, меня зовут Татьяна, я аккредитованный экскурсовод
+                Москвы. Покажу Вам город, который знаю и люблю.
+              </p>
+              <p class="text-lg font-body text-gray-800-custom mt-5">
+                Московская классика и неизведанные маршруты, центральные улицы и
+                скрытые подворотни, дворцы и трущобы – Москва откроется Вам с
+                новой стороны на наших прогулках.
+              </p>
+            </div>
           </div>
         </section>
-        <section class="advantages">
-          <h3 class="title h3-title">Удобно и просто</h3>
-          <ul class="list-reset advantages__list">
-            <li class="list-item-reset advantages__item">
+        <!-- <section class="intro">
+          <div
+            class="intro__container flex flex-col items-center justify-center text-center pt-120px pb-120px"
+          >
+            <h2 class="text-45px font-display font-bold text-indigo mb-60px">
+              Любите прогулки по Москве?
+            </h2>
+
+            <div class="w-80p">
+              <p class="text-lg font-body text-gray-800">
+                Привет, меня зовут Татьяна, я аккредитованный экскурсовод
+                Москвы. Покажу Вам город, который знаю и люблю.
+              </p>
+              <p class="text-lg font-body text-gray-800 mt-20px">
+                Московская классика и неизведанные маршруты, центральные улицы и
+                скрытые подворотни, дворцы и трущобы – Москва откроется Вам с
+                новой стороны на наших прогулках.
+              </p>
+            </div>
+          </div>
+        </section> -->
+
+        <section class="advantages pt-30 pb-30 bg-gray-50-custom">
+          <h3 class="text-45px font-display font-bold text-indigo-custom mb-15">
+            Удобно и просто
+          </h3>
+
+          <ul
+            class="advantages__list flex flex-col justify-center gap-5 flex-wrap max-w-6xl mx-auto"
+          >
+            <!-- Колонка 1: Встречаемся у метро -->
+            <li
+              class="advantages__item flex flex-col items-center text-center p-8 bg-white rounded-lg shadow-lg"
+            >
               <svg
-                viewBox="0 0 56 56"
                 width="50"
-                height="60"
-                stroke="none"
-                fill="var(--accent-color)"
+                height="50"
+                viewBox="0 0 384 512"
+                fill="var(--color-fucsia)"
+                aria-hidden="true"
               >
-                <use href="./images/icons/sprite.svg#metro" />
+                <path
+                  d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+                />
               </svg>
-              <h4 class="title h4-title">Встречаемся у метро</h4>
-              <p class="text">
+              <h4
+                class="text-2xl font-display font-semibold text-indigo-custom mt-4 mb-4"
+              >
+                Встречаемся у метро
+              </h4>
+
+              <p class="text-lg text-gray-800-custom">
                 Встречаемся на выходе у станций метро. И завершаем обычно у
                 метро или рядом
               </p>
             </li>
-            <li class="list-item-reset advantages__item">
-              <svg
-                viewBox="0 0 56 56"
-                fill="none"
-                width="50"
-                height="60"
-                stroke="var(--accent-color)"
-                stroke-width="4"
-              >
-                <use href="./images/icons/sprite.svg#smile" />
-              </svg>
 
-              <h4 class="title h4-title">По расписанию</h4>
-              <p class="text">
+            <!-- Колонка 2: По расписанию -->
+            <li
+              class="advantages__item flex flex-col items-center text-center p-8 bg-white rounded-lg shadow-lg"
+            >
+              <svg
+                width="50"
+                height="50"
+                viewBox="0 0 448 512"
+                fill="var(--color-fucsia)"
+                aria-hidden="true"
+              >
+                <path
+                  d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"
+                />
+              </svg>
+              <h4
+                class="text-2xl font-display font-semibold text-indigo-custom mt-4 mb-4"
+              >
+                По расписанию
+              </h4>
+              <p class="text-lg text-gray-800-custom">
                 Экскурсии проводятся по расписанию. Выбираете удобный Вам день и
                 тему - и приходите
               </p>
             </li>
-            <li class="list-item-reset advantages__item">
+
+            <!-- Колонка 3: Бесплатно -->
+            <li
+              class="advantages__item flex flex-col items-center text-center p-8 bg-white rounded-lg shadow-lg"
+            >
               <svg
-                viewBox="0 0 56 56"
-                fill="var(--accent-color)"
                 width="50"
-                height="60"
-                stroke="none"
+                height="50"
+                viewBox="0 0 496 512"
+                fill="var(--color-fucsia)"
+                aria-hidden="true"
               >
-                <use href="./images/icons/sprite.svg#like" />
+                <path
+                  d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                />
               </svg>
-              <h4 class="title h4-title">Бесплатно</h4>
-              <p class="text">
+              <h4
+                class="text-2xl font-display font-semibold text-indigo-custom mt-4 mb-4"
+              >
+                Бесплатно
+              </h4>
+              <p class="text-lg text-gray-800-custom">
                 Экскурсии проводятся бесплатно. Запись Вас ни к чему не
                 обязывает
               </p>
@@ -316,3 +421,17 @@
     <script src="./js/script.js"></script>
   </body>
 </html>
+<!-- <section class="intro">
+          <div class="intro__container">
+            <h2 class="title h3-title">Любите прогулки по Москве?</h2>
+            <p class="text intro__text">
+              Привет, меня зовут Татьяна, я аккредитованный экскурсовод Москвы.
+            </p>
+            <p class="text intro__text">
+              Покажу Вам город, который знаю и люблю. Московская классика и
+              неизведанные маршруты, центральные улицы и скрытые подворотни,
+              дворцы и трущобы – Москва откроется Вам с новой стороны на наших
+              прогулках.
+            </p>
+          </div>
+        </section> -->
