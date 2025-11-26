@@ -1,6 +1,6 @@
 const express = require("express");
 const helmet = require("helmet");
-const { PORT = 3000, BASE_PATH } = process.env;
+const { PORT = 3001, BASE_PATH } = process.env;
 const path = require("path");
 const app = express();
 app.use(helmet());

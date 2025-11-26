@@ -1,28 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-body;
+  }
+  .page {
+    @apply bg-white font-body text-gray-900 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display text-indigo-brand;
+  }
+
+  a {
+    @apply font-medium text-indigo-brand underline decoration-indigo-brand decoration-[0.08em] underline-offset-[0.3em] transition-all duration-300 ease-in-out;
+  }
+
+  a:hover {
+    @apply -translate-y-px text-fuchsia-brand decoration-fuchsia-brand decoration-[0.1em] underline-offset-[0.15em];
+  }
+}
+
 /* === CSS ПЕРЕМЕННЫЕ === */
 :root {
-  /* Шрифты */
-  --font-body: "Montserrat", Arial, Helvetica, sans-serif;
-  --font-display: "Playfair Display", serif;
-
-  /* Цвета */
-  --color-text: #333333;
-  --color-bg: #fff;
   --color-indigo: #2f1893;
   --color-fucsia: #e93a7d;
-  --color-golden: #cbaa5c;
+  /* --font-body: "Montserrat", Arial, Helvetica, sans-serif;
+  --font-display: "Playfair Display", serif; 
+  --color-text: #333333;
+  --color-bg: #fff;
+ --color-golden: #cbaa5c; */
 }
 
 /* === GLOBAL RESET === */
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 /* === БАЗОВЫЕ СТИЛИ СТРАНИЦЫ === */
-.page {
+/* .page {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.5;
@@ -30,7 +57,7 @@
   background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 /* === БЭМ КОМПОНЕНТЫ === */
 .intro__container {
@@ -67,12 +94,12 @@
 .font-bold {
   font-weight: 700;
 }
-.font-display {
+/* .font-display {
   font-family: var(--font-display);
-}
-.font-body {
+} */
+/* .font-body {
   font-family: var(--font-body);
-}
+} */
 
 /* TV spacing утилиты */
 .mt-5 {
@@ -140,7 +167,6 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
 } */
-
 
 /* :root {
   --indigo: #2f1893;
@@ -515,11 +541,11 @@
   left: 0;
 }
 
-.menu__list {
+/* .menu__list {
   display: flex;
   align-items: center;
   gap: 40px;
-}
+} */
 @media (max-width: 805px) {
   .menu__list {
     flex-direction: column;
@@ -628,13 +654,13 @@
   }
 }
 
-.intro {
+/* .intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: rgb(246, 247, 249); */
-}
+
+} */
 .intro__container {
   width: 80%;
   display: flex;
@@ -659,7 +685,7 @@
   }
 }
 
-.excursion-card {
+/* .excursion-card {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -669,7 +695,7 @@
     flex-direction: row;
     gap: 20px;
   }
-}
+} */
 
 .advantages {
   display: flex;

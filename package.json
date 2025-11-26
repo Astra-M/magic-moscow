@@ -5,18 +5,25 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "server": "nodemon server.js",
+    "css": "npx tailwindcss -i ./public/index.css -o ./public/tw-styles.css --watch",
+    "sync": "npx browser-sync start --proxy localhost:3001 --files 'public/*.css, public/*.html, public/**/*.css'",
+    "dev": "concurrently \"npm run css\" \"npm run server\" \"npm run sync\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.17",
     "express": "^4.21.2",
-    "helmet": "^8.0.0",
-    "tailwindcss": "^4.1.17"
+    "helmet": "^8.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "browser-sync": "^3.0.4",
+    "caniuse-lite": "^1.0.30001755",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "tailwindcss": "^3.4.0"
   }
 }
