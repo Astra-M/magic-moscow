@@ -526,11 +526,11 @@
   max-height: 60px;
 } */
 
-.menu {
+.mobile-menu {
 }
 
 @media (max-width: 805px) {
-  .menu_opened {
+  .mobile-menu_opened {
     left: 0;
   }
 }

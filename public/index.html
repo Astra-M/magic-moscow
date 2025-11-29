@@ -134,7 +134,7 @@
   </head>
   <body class="mx-auto max-w-7xl">
     <header
-      class="relative flex h-[90vh] flex-col items-center justify-center before:absolute before:inset-0 before:z-10 before:bg-indigo-900 before:opacity-40"
+      class="relative flex h-screen flex-col items-center justify-center before:absolute before:inset-0 before:z-10 before:bg-indigo-900 before:opacity-40 min-[805px]:h-[90vh]"
     >
       <nav
         class="absolute left-0 right-0 top-0 z-30 mx-auto flex items-center justify-between px-4 py-4 md:px-9 md:py-8 lg:px-9"
@@ -148,15 +148,72 @@
         </a>
 
         <div
-          class="burger relative z-10 h-10 w-12 cursor-pointer min-[805px]:hidden"
+          class="burger relative z-10 ml-auto h-10 w-12 cursor-pointer min-[805px]:hidden"
         >
           <span class="burger__line"></span>
           <span class="burger__line"></span>
           <span class="burger__line"></span>
         </div>
-
+        <!-- <ul
+          class="mobile-menu fixed left-[-100%] top-0 h-screen w-full bg-fuchsia-brand transition-all duration-500 max-[805px]:flex-col max-[804px]:flex max-[804px]:items-center max-[804px]:justify-center max-[804px]:p-5 min-[805px]:static min-[805px]:flex min-[805px]:h-12 min-[805px]:w-auto min-[805px]:flex-row min-[805px]:items-center min-[805px]:gap-10 min-[805px]:bg-transparent"
+        > -->
         <ul
-          class="menu fixed left-[-100%] top-0 h-screen w-full bg-fuchsia-brand transition-all duration-500 max-[805px]:flex-col max-[804px]:flex max-[804px]:items-center max-[804px]:justify-center max-[804px]:p-5 min-[805px]:static min-[805px]:flex min-[805px]:h-12 min-[805px]:w-auto min-[805px]:flex-row min-[805px]:items-center min-[805px]:gap-10 min-[805px]:bg-transparent"
+          class="mobile-menu fixed left-[-100%] top-0 flex h-screen w-full flex-col items-center justify-center bg-fuchsia-brand transition-all duration-500"
+        >
+          <!-- <ul
+          class="mobile-menu fixed left-[-100%] top-0 h-screen w-full bg-fuchsia-brand transition-all duration-500"
+        > -->
+          <li class="">
+            <a
+              href="/"
+              class="relative flex items-center py-2 text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              <svg
+                class="h-10 w-10 fill-current align-baseline"
+                viewBox="0 0 16 20"
+              >
+                <path d="M8 1L1 7v8h5v-5h4v5h5V7z" />
+              </svg>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/"
+              class="relative inline-flex py-2 text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              О гиде
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/"
+              class="relative inline-flex py-2 text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              Экскурсии
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/"
+              class="relative inline-flex py-2 text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              Расписание
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="/"
+              class="relative inline-flex py-2 text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              Контакты
+            </a>
+          </li>
+        </ul>
+        <!-- <ul
+          class="mobile-menu fixed left-[-100%] top-0 h-screen w-full bg-fuchsia-brand transition-all duration-500 max-[805px]:flex-col max-[804px]:flex max-[804px]:items-center max-[804px]:justify-center max-[804px]:p-5 min-[805px]:static min-[805px]:flex min-[805px]:h-12 min-[805px]:w-auto min-[805px]:flex-row min-[805px]:items-center min-[805px]:gap-10 min-[805px]:bg-transparent"
+        > -->
+        <ul
+          class="desktop-menu hidden max-[804px]:hidden min-[805px]:flex min-[805px]:h-12 min-[805px]:items-center min-[805px]:gap-10"
         >
           <li class="">
             <a
