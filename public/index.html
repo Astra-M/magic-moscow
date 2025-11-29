@@ -139,7 +139,7 @@
       <nav
         class="absolute left-0 right-0 top-0 z-30 mx-auto flex items-center justify-between px-4 py-4 md:px-9 md:py-8 lg:px-9"
       >
-        <a href="./index.html" class="z-20">
+        <a href="./index.html" class="logo z-20">
           <img
             src="../public/images/logo/logo_magic-moscow.png"
             alt="Волшебная Москва - главная страница"
@@ -150,73 +150,60 @@
         <div
           class="burger relative z-10 h-10 w-12 cursor-pointer min-[805px]:hidden"
         >
-          <span
-            class="burger__line absolute left-0 top-0 h-0.5 w-full bg-white transition-all"
-          ></span>
-          <span
-            class="burger__line absolute left-0 top-1/2 h-0.5 w-full -translate-y-1/2 bg-white transition-all"
-          ></span>
-          <span
-            class="burger__line absolute bottom-0 left-0 h-0.5 w-full bg-white transition-all"
-          ></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
         </div>
 
-        <!-- <nav class="menu hidden min-[805px]:block"> -->
         <ul
-          class="menu menu__list fixed left-[-100%] top-0 m-0 hidden h-screen w-full list-none items-center gap-10 bg-amber-200 p-0 transition-all duration-500 min-[805px]:static min-[805px]:flex min-[805px]:h-auto min-[805px]:w-auto min-[805px]:flex-row min-[805px]:bg-transparent"
+          class="menu fixed left-[-100%] top-0 h-screen w-full bg-fuchsia-brand transition-all duration-500 max-[805px]:flex-col max-[804px]:flex max-[804px]:items-center max-[804px]:justify-center max-[804px]:p-5 min-[805px]:static min-[805px]:flex min-[805px]:h-12 min-[805px]:w-auto min-[805px]:flex-row min-[805px]:items-center min-[805px]:gap-10 min-[805px]:bg-transparent"
         >
-          <!-- <ul
-          class="menu menu__list m-0 flex hidden list-none items-center gap-10 p-0 min-[805px]:block"
-        > -->
-          <li class="list-item-reset">
+          <li class="">
             <a
               href="/"
-              class="menu__link text-shadow text-white no-underline transition-transform hover:scale-105"
+              class="relative flex items-center py-2 text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
             >
               <svg
-                class="menu__icon h-5 w-5"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                aria-hidden="true"
+                class="h-5 w-5 fill-current align-baseline"
+                viewBox="0 0 16 20"
               >
                 <path d="M8 1L1 7v8h5v-5h4v5h5V7z" />
               </svg>
             </a>
           </li>
-          <li class="list-item-reset">
+          <li class="">
             <a
-              href=""
-              class="menu__link text-shadow text-white no-underline transition-transform hover:scale-105"
+              href="/"
+              class="relative inline-flex py-2 text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
             >
               О гиде
             </a>
           </li>
-          <li class="list-item-reset">
+          <li class="">
             <a
-              href=""
-              class="menu__link text-shadow text-white no-underline transition-transform hover:scale-105"
+              href="/"
+              class="relative inline-flex py-2 text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
             >
               Экскурсии
             </a>
           </li>
-          <li class="list-item-reset">
+          <li class="">
             <a
-              href=""
-              class="menu__link text-shadow text-white no-underline transition-transform hover:scale-105"
+              href="/"
+              class="relative inline-flex py-2 text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
             >
               Расписание
             </a>
           </li>
-          <li class="list-item-reset">
+          <li class="">
             <a
-              href=""
-              class="menu__link text-shadow text-white no-underline transition-transform hover:scale-105"
+              href="/"
+              class="relative inline-flex py-2 text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
             >
               Контакты
             </a>
           </li>
         </ul>
-        <!-- </nav> -->
       </nav>
       <img
         src="../public/images/Фото Василия Блаженного в цвету.jpeg"
@@ -653,3 +640,15 @@
           </a>
         </div>
       </header> -->
+<!-- <svg
+                class="h-5 w-5 align-baseline"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z"
+                />
+                <path
+                  d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z"
+                />
+              </svg> -->
