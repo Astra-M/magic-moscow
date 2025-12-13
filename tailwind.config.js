@@ -1,12 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/*.html"],
+  content: ["./public/**/*.html"],
   theme: {
     extend: {
       colors: {
         "indigo-brand": "#2f1893",
-        "fuchsia-brand": "#e93a7d",
-        "golden-brand": "#cbaa5c"
+        "fuchsia-brand": "#e93a7d"
       },
       spacing: {
         15: "3.75rem",

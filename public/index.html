@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <title>Бесплатные пешеходные экскурсии по Москве 2025</title>
     <meta
@@ -51,7 +50,7 @@
       type="text/css"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
-    <link rel="stylesheet" href="./tw-styles.css" />
+    <link rel="stylesheet" href="/tw-styles.css" />
 
     <link
       rel="icon"
@@ -140,9 +139,9 @@
         aria-label="Главное меню"
         class="absolute left-0 right-0 top-0 z-30 mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-9 md:py-8 lg:px-9"
       >
-        <a href="./index.html" class="logo z-20">
+        <a href="/" class="logo z-20">
           <img
-            src="../public/images/logo/logo_magic-moscow.png"
+            src="/images/logo/logo_magic-moscow.png"
             alt="Волшебная Москва - главная страница"
             class="h-12 w-auto object-contain"
           />
@@ -257,7 +256,7 @@
         </ul>
       </nav>
       <img
-        src="../public/images/Фото Василия Блаженного в цвету.jpeg"
+        src="/images/Фото Василия Блаженного в цвету.jpeg"
         class="absolute inset-0 z-0 h-full w-full object-cover"
         alt="Собор Василия Блаженного в цвету - символ Москвы"
       />
@@ -281,7 +280,7 @@
       </div>
     </header>
 
-    <!-- <main class="mx-auto max-w-7xl">
+    <main class="mx-auto max-w-7xl">
       <section class="intro">
         <div
           class="intro__container flex flex-col items-center justify-center pb-30 pt-30 text-center"
@@ -563,7 +562,7 @@
           </li>
         </ul>
       </section>
-    </main> -->
+    </main>
     <footer class="bg-fuchsia-brand px-4 py-8 text-white">
       <div
         class="mx-auto flex max-w-7xl flex-col items-center gap-8 md:flex-row md:justify-center md:gap-16"
@@ -573,7 +572,7 @@
           class="transition-all duration-300 hover:-translate-y-1 hover:scale-105"
         >
           <img
-            src="../public/images/logo/logo_magic-moscow.png"
+            src="/images/logo/logo_magic-moscow.png"
             alt="Волшебная Москва"
             class="h-12 w-auto md:h-16"
           />
@@ -589,7 +588,7 @@
                 href="/about"
                 class="relative inline-flex items-center gap-2 transition-all duration-200 hover:after:absolute hover:after:bottom-[-1px] hover:after:left-0 hover:after:h-px hover:after:w-full hover:after:bg-white"
               >
-                Обо мне
+                Экскурсии
               </a>
             </li>
 
@@ -598,7 +597,7 @@
                 href="/excursions"
                 class="relative inline-flex items-center gap-2 transition-all duration-200 hover:after:absolute hover:after:bottom-[-1px] hover:after:left-0 hover:after:h-px hover:after:w-full hover:after:bg-white"
               >
-                Экскурсии
+                Контакты
               </a>
             </li>
             <li>
@@ -606,7 +605,7 @@
                 href="/contacts"
                 class="relative hover:after:absolute hover:after:bottom-[-1px] hover:after:left-0 hover:after:h-px hover:after:w-full hover:after:bg-white"
               >
-                Контакты
+                О гиде
               </a>
             </li>
           </ul>
@@ -685,13 +684,15 @@
         </nav>
       </div>
 
-      <div class="mt-8 border-t border-white/20 pt-4 text-center">
-        <p>&copy; Copyright Волшебная Москва, 2025</p>
-      </div>
+      <!-- <div class="mt-8 border-t border-white/20 pt-4 text-center text-sm"> -->
+      <p class="mt-8 border-t border-white/20 pt-8 text-center text-sm">
+        &copy; Copyright Волшебная Москва, 2025
+      </p>
+      <!-- </div> -->
     </footer>
 
     <!-- </div> -->
-    <script src="./js/script.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
 <!-- <header class="header">

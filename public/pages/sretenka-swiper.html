@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пешеходная экскурсия по Сретенке</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../index.css" />
+    <!-- Если стили свайпера идут после моих кастомных стилей, то исчезнет отступ между большой фото и иконками снизу. -->
+  </head>
+
+  <body class="page">
+    <div class="page__container">
+      <div class="swiper main-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="../images/Куртизанки и святые_экскурсия.jpg"
+              alt="Image 1"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/Москва зимой.jpg" alt="Image 2" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../images/Куртизанки и святые_экскурсия.jpg"
+              alt="Image 3"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/Москва зимой.jpg" alt="Image 3" />
+          </div>
+        </div>
+        <!-- Навигация -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- Пагинация -->
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="swiper thumbs-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="../images/Куртизанки и святые_экскурсия.jpg"
+              alt="Image 1"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/Москва зимой.jpg" alt="Image 2" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../images/Куртизанки и святые_экскурсия.jpg"
+              alt="Image 3"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/Москва зимой.jpg" alt="Image 3" />
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p class="footer__copyright">&copy Волшебная Москва, 2025</p>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+      const mainSlider = new Swiper(".main-slider", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // pagination: {
+        //   el: ".swiper-pagination",
+        //   clickable: true,
+        // },
+      });
+
+      const thumbsSlider = new Swiper(".thumbs-slider", {
+        loop: true,
+        slidesPerView: 3, // Количество миниатюр, отображаемых одновременно
+        spaceBetween: 10,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+
+      // Связываем основной слайдер и миниатюры
+      mainSlider.controller.control = thumbsSlider;
+      thumbsSlider.controller.control = mainSlider;
+    </script>
+  </body>
+</html>
+<!-- <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    const swiper2 = new Swiper(".mySwiper2", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  </>
+</html> -->
