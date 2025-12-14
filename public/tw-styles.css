@@ -634,9 +634,24 @@ h1,
   z-index: 30;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-15 {
+  margin-top: 3.75rem;
+  margin-bottom: 3.75rem;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .mb-15 {
@@ -699,10 +714,6 @@ h1,
   height: 1.5rem;
 }
 
-.h-7 {
-  height: 1.75rem;
-}
-
 .h-8 {
   height: 2rem;
 }
@@ -751,10 +762,6 @@ h1,
   width: 1.5rem;
 }
 
-.w-7 {
-  width: 1.75rem;
-}
-
 .w-8 {
   width: 2rem;
 }
@@ -770,14 +777,6 @@ h1,
 
 .w-full {
   width: 100%;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
-.w-3\/4 {
-  width: 75%;
 }
 
 .max-w-4xl {
@@ -816,16 +815,8 @@ h1,
   flex-wrap: wrap;
 }
 
-.items-start {
-  align-items: flex-start;
-}
-
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-center {
@@ -872,6 +863,10 @@ h1,
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .rounded-full {
@@ -1012,6 +1007,22 @@ h1,
   padding-bottom: 7.5rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .pt-10 {
   padding-top: 2.5rem;
 }
@@ -1030,14 +1041,6 @@ h1,
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
-}
-
-.pl-4 {
-  padding-left: 1rem;
 }
 
 .text-center {
@@ -1228,6 +1231,17 @@ h1,
 } */
 
 /* === БЭМ КОМПОНЕНТЫ === */
+
+.cta-with-bg {
+  background:
+    linear-gradient(
+      to bottom right,
+      rgba(47, 24, 147, 0.9),
+      rgba(233, 58, 125, 0.9)
+    ),
+    url("/images/excursions/sretenka/Sretenskij-monastyr.jpg") center/cover
+      no-repeat;
+}
 
 .intro__container {
   width: 80%;
@@ -2535,6 +2549,18 @@ h1,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .min-\[600px\]\:flex-row {
+    flex-direction: row;
+  }
+
+  .min-\[600px\]\:items-center {
+    align-items: center;
+  }
+
+  .min-\[600px\]\:justify-center {
+    justify-content: center;
+  }
+
   .min-\[600px\]\:gap-4 {
     gap: 1rem;
   }
@@ -2570,14 +2596,6 @@ h1,
 
   .md\:w-4\/5 {
     width: 80%;
-  }
-
-  .md\:w-4 {
-    width: 1rem;
-  }
-
-  .md\:w-3\/5 {
-    width: 60%;
   }
 
   .md\:grid-cols-2 {
@@ -2628,42 +2646,24 @@ h1,
     padding-bottom: 3.5rem;
   }
 
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
-  .md\:pr-4 {
-    padding-right: 1rem;
-  }
-
-  .md\:pl-4 {
-    padding-left: 1rem;
-  }
-
-  .md\:pt-15 {
-    padding-top: 3.75rem;
-  }
-
-  .md\:pt-12 {
-    padding-top: 3rem;
-  }
-
-  .md\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
-  .md\:pb-20 {
-    padding-bottom: 5rem;
-  }
-
-  .md\:pt-20 {
-    padding-top: 5rem;
-  }
-
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .md\:text-7xl {

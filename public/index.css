@@ -60,6 +60,17 @@
 } */
 
 /* === БЭМ КОМПОНЕНТЫ === */
+.cta-with-bg {
+  background:
+    linear-gradient(
+      to bottom right,
+      rgba(47, 24, 147, 0.9),
+      rgba(233, 58, 125, 0.9)
+    ),
+    url("/images/excursions/sretenka/Sretenskij-monastyr.jpg") center/cover
+      no-repeat;
+}
+
 .intro__container {
   width: 80%;
   margin: 0 auto;
