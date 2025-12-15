@@ -242,8 +242,9 @@
         </p>
       </div>
     </header>
-    <main class="mx-auto max-w-7xl px-4 py-4">
-      <article class="mx-auto w-full md:w-4/5">
+    <!-- <main class="mx-auto max-w-7xl px-4 py-4"> -->
+    <main class="mx-auto">
+      <article class="mx-auto w-full max-w-7xl px-4 py-4 md:w-4/5">
         <section class="w-full flex-col items-center justify-center">
           <ul
             class="flex flex-col gap-6 rounded-lg bg-indigo-50 px-5 py-10 md:grid md:grid-cols-2 md:gap-6 md:px-12 md:py-14"
@@ -495,32 +496,92 @@
         <!-- <div
           class="md:pb-18 md:pt-18 flex flex-col items-center justify-center rounded-lg bg-indigo-50 pb-10 pl-4 pr-4 pt-10"
         > -->
-        <section
-          class="cta-with-bg my-10 flex w-full items-center justify-center rounded py-10 md:py-20"
-        >
-          <div
-            class="justify-senter flex flex-col items-center gap-4 px-6 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-center md:w-4/5"
-          >
-            <div class="flex w-full flex-col pb-6">
-              <h3 class="pb-4 font-display text-2xl text-white md:text-3xl">
-                Зарегистрируйтесь
-                <br />
-                на экскурсию
-              </h3>
-              <p class="text-l font-body text-white">
-                Экскурсия бесплатная, ближайшие даты смотрите в форме записи. До
-                встречи на прогулке!
-              </p>
-            </div>
-
-            <button
-              class="mx-4 rounded-full bg-fuchsia-brand px-6 py-3 text-sm font-normal uppercase tracking-wider text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-fuchsia-brand hover:to-indigo-brand hover:font-semibold hover:text-white"
-            >
-              подробнее
-            </button>
-          </div>
-        </section>
       </article>
+      <section
+        class="relative my-10 flex w-full items-center justify-center overflow-hidden rounded py-10 md:py-20"
+      >
+        <div class="absolute inset-0 z-0 mx-auto max-w-[2000px]">
+          <img
+            src="/images/ostojenka_2.jpg"
+            class="h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="cta-with-bg absolute inset-0 z-10"></div>
+
+        <div
+          class="relative z-20 flex max-w-7xl flex-col items-center justify-center gap-4 px-6 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-center md:w-4/5"
+        >
+          <div class="flex w-full flex-col pb-6">
+            <h3 class="pb-4 font-display text-2xl text-white md:text-3xl">
+              Зарегистрируйтесь
+              <br />
+              на экскурсию
+            </h3>
+            <p class="text-l font-body text-white">
+              Экскурсия бесплатная, ближайшие даты смотрите в форме записи. До
+              встречи на прогулке!
+            </p>
+          </div>
+          <button
+            class="mx-4 rounded-full bg-fuchsia-brand px-6 py-3 text-sm font-normal uppercase tracking-wider text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-fuchsia-brand hover:to-indigo-brand hover:font-semibold hover:text-white"
+          >
+            записаться
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="cta-gradient my-10 flex w-full items-center justify-center rounded py-10 md:py-20"
+      >
+        <div
+          class="flex max-w-7xl flex-col items-center justify-center gap-4 px-6 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-center md:w-4/5"
+        >
+          <div class="flex w-full flex-col pb-6">
+            <h3 class="pb-4 font-display text-2xl text-white md:text-3xl">
+              Зарегистрируйтесь
+              <br />
+              на экскурсию
+            </h3>
+            <p class="text-l font-body text-white">
+              Экскурсия бесплатная, ближайшие даты смотрите в форме записи. До
+              встречи на прогулке!
+            </p>
+          </div>
+
+          <button
+            class="mx-4 rounded-full bg-fuchsia-brand px-6 py-3 text-sm font-normal uppercase tracking-wider text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-fuchsia-brand hover:to-indigo-brand hover:font-semibold hover:text-white"
+          >
+            записаться
+          </button>
+        </div>
+      </section>
+      <!-- Старый градиент -->
+      <section
+        class="cta-with-bg my-10 flex w-full items-center justify-center rounded py-10 md:py-20"
+      >
+        <div
+          class="justify-senter flex max-w-7xl flex-col items-center gap-4 px-6 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-center md:w-4/5"
+        >
+          <div class="flex w-full flex-col pb-6">
+            <h3 class="pb-4 font-display text-2xl text-white md:text-3xl">
+              Зарегистрируйтесь
+              <br />
+              на экскурсию
+            </h3>
+            <p class="text-l font-body text-white">
+              Экскурсия бесплатная, ближайшие даты смотрите в форме записи. До
+              встречи на прогулке!
+            </p>
+          </div>
+
+          <button
+            class="mx-4 rounded-full bg-fuchsia-brand px-6 py-3 text-sm font-normal uppercase tracking-wider text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-fuchsia-brand hover:to-indigo-brand hover:font-semibold hover:text-white"
+          >
+            записаться
+          </button>
+        </div>
+      </section>
     </main>
 
     <footer class="bg-fuchsia-brand px-4 py-8 text-white">

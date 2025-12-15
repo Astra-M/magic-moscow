@@ -644,11 +644,6 @@ h1,
   margin-right: auto;
 }
 
-.my-15 {
-  margin-top: 3.75rem;
-  margin-bottom: 3.75rem;
-}
-
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -863,6 +858,10 @@ h1,
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded {
@@ -1232,16 +1231,61 @@ h1,
 
 /* === БЭМ КОМПОНЕНТЫ === */
 
+/* .cta-gradient {
+  background: linear-gradient(
+    to right,
+    #2f1893 0%,
+    rgba(47, 24, 147, 0.9) 40%,
+    rgba(47, 24, 147, 0.7) 45%,
+    rgba(233, 58, 125, 0.7) 55%,
+    rgba(233, 58, 125, 0.9) 60%,
+    #e93a7d 100%
+  );
+} */
+
+/* .cta-fade-gradient {
+  background: linear-gradient(
+    to bottom right,
+    #2f1893 0%,
+    rgba(47, 24, 147, 0.7) 40%,
+    rgba(233, 58, 125, 0.7) 60%,
+    #e93a7d 100%
+  );
+} */
+
 .cta-with-bg {
+  background: linear-gradient(
+    to bottom right,
+    rgba(47, 24, 147, 0.9),
+    rgba(233, 58, 125, 0.9)
+  );
+}
+
+/* .cta-gradient-overlay {
+  background: linear-gradient(
+    to bottom right,
+    #2f1893 0%,
+    rgba(47, 24, 147, 0.9) 40%,
+    rgba(47, 24, 147, 0.7) 45%,
+    rgba(233, 58, 125, 0.7) 55%,
+    rgba(233, 58, 125, 0.9) 60%,
+    #e93a7d 100%
+  );
+} */
+
+/* .cta-gradient-overlay {
   background:
     linear-gradient(
-      to bottom right,
-      rgba(47, 24, 147, 0.9),
-      rgba(233, 58, 125, 0.9)
+      to right,
+      #2f1893 0%,
+      rgba(47, 24, 147, 0.9) 10%,
+      rgba(47, 24, 147, 0.7) 20%,
+      rgba(233, 58, 125, 0.7) 80%,
+      rgba(233, 58, 125, 0.9) 90%,
+      #e93a7d 100%
     ),
-    url("/images/excursions/sretenka/Sretenskij-monastyr.jpg") center/cover
-      no-repeat;
-}
+    url("images/ostojenka_1.jpg") center/cover no-repeat;
+} */
 
 .intro__container {
   width: 80%;
