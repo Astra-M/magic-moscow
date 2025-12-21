@@ -858,6 +858,10 @@ h1,
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -884,6 +888,14 @@ h1,
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-0\.5 {
+  gap: 0.125rem;
 }
 
 .space-y-12 > :not([hidden]) ~ :not([hidden]) {
@@ -2642,6 +2654,16 @@ h1,
 .hover\:after\:left-0:hover::after {
   content: var(--tw-content);
   left: 0px;
+}
+
+.hover\:after\:bottom-\[-4px\]:hover::after {
+  content: var(--tw-content);
+  bottom: -4px;
+}
+
+.hover\:after\:bottom-\[4px\]:hover::after {
+  content: var(--tw-content);
+  bottom: 4px;
 }
 
 .hover\:after\:h-0\.5:hover::after {
