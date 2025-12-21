@@ -1,260 +1,699 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Пешеходная экскурсия по Сретенке</title>
+    <!-- Заменить тайтл, дескрипшн, рел каноникал -->
+    <title>Бесплатная пешеходная экскурсия по Остоженке в Москве</title>
+    <meta
+      name="description"
+      content="Невероятная экскурсия-погружение по Сретенке – древнейшей улице Москвы. Вас
+    ждут городские байки и легенды, рассказы о высоком духовном подвиге и
+    мелочном мошенничестве, о личной жизни знаменитостей разных времен. Прогулка
+    бесплатная. Расписание и запись на сайте."
+    />
+    <link rel="canonical" href="https://magic-moscow.ru/sretenka/" />
+    <!-- Не меняем в ОГ: локаль, тип, имя сайта  -->
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Экскурсии по Москве" />
+    <!-- Заменить в ОГ: урл, тайтл, дескрипшн, имидж -->
+    <meta property="og:url" content="https://magic-moscow.ru/sretenka/" />
+    <meta
+      property="og:title"
+      content="Бесплатная пешеходная экскурсия по Сретенке в Москве"
+    />
+    <meta
+      property="og:description"
+      content="Невероятная экскурсия-погружение по Сретенке – древнейшей улице Москвы. Вас ждут городские байки и легенды, рассказы о высоком духовном подвиге и мелочном мошенничестве, о личной жизни знаменитостей разных времен. Прогулка бесплатная. Расписание и запись на сайте."
+    />
+
+    <!-- Ог-картинка 1200Х630/ 600×315/ 1.91:1. Размеры перепрописать. 
+     Путь пока от корня относительный, заменить  перед заливкой на сервер, 
+     тк обязательно абсолютный! Проверка - http://localhost:5500/images/excursions/sretenka/Sretenskij-monastyr-og.jpg-->
+
+    <meta
+      property="og:image"
+      content="/images/excursions/sretenka/Sretenskij-monastyr-og.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       type="text/css"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="../index.css" />
-    <!-- Если стили свайпера идут после моих кастомных стилей, то исчезнет отступ между большой фото и иконками снизу. -->
-  </head>
+    <link rel="stylesheet" href="/tw-styles.css" />
 
-  <body class="page">
-    <div class="page__container">
-      <header class="header">
-        <div class="navigation header__navigation">
-          <a href="../index-gold.html" class="logo">
-            <img
-              class="logo__img"
-              src="../images/logo/logo_magic-moscow.png"
-              alt="логотип сайта Волшебная Москва"
-            />
-          </a>
-          <div class="burger">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-          </div>
-          <nav class="menu">
-            <ul class="menu__list list-reset">
-              <li class="list-item-reset">
-                <a href="" class="link menu__link">На главную</a>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://magic-moscow.ru/images/favicon/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://magic-moscow.ru/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://magic-moscow.ru/images/favicon/favicon-16x16.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://magic-moscow.ru/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="https://magic-moscow.ru/images/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="https://magic-moscow.ru/images/favicon/android-chrome-512x512.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#e93a7d" />
+  </head>
+  <body>
+    <header
+      class="relative mx-auto flex h-screen max-w-[2000px] flex-col items-center justify-center before:absolute before:inset-0 before:z-10 before:bg-indigo-900 before:opacity-40 min-[805px]:h-[90vh]"
+    >
+      <nav
+        aria-label="Главное меню"
+        class="absolute left-0 right-0 top-0 z-30 mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-9 md:py-8 lg:px-9"
+      >
+        <a
+          href="/"
+          class="transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+        >
+          <img
+            src="/images/logo/logo_magic-moscow.png"
+            alt="Волшебная Москва - главная страница"
+            class="h-12 w-auto object-contain"
+          />
+        </a>
+
+        <div
+          class="burger relative z-10 ml-auto h-10 w-12 cursor-pointer min-[805px]:hidden"
+        >
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </div>
+
+        <ul
+          class="mobile-menu fixed left-[-100%] top-0 flex h-screen w-full flex-col items-center justify-center bg-fuchsia-brand transition-all duration-500"
+        >
+          <li class="px-6 py-3">
+            <a
+              href="/"
+              class="relative flex items-center text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              <svg
+                class="h-10 w-8 fill-current align-baseline"
+                viewBox="0 0 16 20"
+              >
+                <path d="M8 1L1 7v8h5v-5h4v5h5V7z" />
+              </svg>
+            </a>
+          </li>
+          <li class="px-6 py-3">
+            <a
+              href="/"
+              class="relative inline-flex text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              О гиде
+            </a>
+          </li>
+          <li class="px-6 py-3">
+            <a
+              href="/"
+              class="relative inline-flex text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              Экскурсии
+            </a>
+          </li>
+          <li class="px-6 py-3">
+            <a
+              href="/"
+              class="relative inline-flex text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              Расписание
+            </a>
+          </li>
+          <li class="px-6 py-3">
+            <a
+              href="/"
+              class="relative inline-flex text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              Контакты
+            </a>
+          </li>
+        </ul>
+
+        <ul
+          class="desktop-menu hidden max-[804px]:hidden min-[805px]:flex min-[805px]:h-12 min-[805px]:items-center min-[805px]:gap-3"
+        >
+          <li class="">
+            <a
+              class="relative inline-block cursor-pointer px-6 py-3 text-white no-underline"
+            >
+              <span
+                class="relative inline-block after:absolute after:bottom-[-8px] after:left-0 after:h-0.5 after:w-0 after:bg-fuchsia-brand after:transition-all after:duration-300 hover:after:w-full"
+              >
+                <svg
+                  class="h-5 w-5 fill-current align-baseline"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M8 1L1 7v8h5v-5h4v5h5V7z" />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              class="relative inline-block cursor-pointer px-6 py-3 text-white no-underline"
+            >
+              <span
+                class="relative after:absolute after:bottom-[-8px] after:left-0 after:h-0.5 after:w-0 after:bg-fuchsia-brand after:transition-all after:duration-300 hover:after:w-full"
+              >
+                О гиде
+              </span>
+            </a>
+          </li>
+          <li class="group relative">
+            <a
+              class="relative inline-block cursor-pointer px-6 py-3 text-white no-underline"
+            >
+              <span
+                class="relative after:absolute after:bottom-[-8px] after:left-0 after:h-0.5 after:w-0 after:bg-fuchsia-brand after:transition-all after:duration-300 hover:after:w-full"
+              >
+                Экскурсии
+              </span>
+            </a>
+
+            <ul
+              class="absolute left-0 top-full z-30 hidden min-w-[300px] divide-y divide-gray-100 border-fuchsia-brand bg-white shadow-lg group-hover:block group-hover:origin-left group-hover:scale-x-100 group-hover:border-t-4 group-hover:transition-transform group-hover:duration-300"
+            >
+              <li class="">
+                <a
+                  href="/"
+                  class="block px-6 py-3 text-indigo-brand no-underline transition-colors duration-200 hover:bg-fuchsia-brand hover:text-white"
+                >
+                  Куртизанки и святые на Сретенском холме
+                </a>
               </li>
-              <li class="list-item-reset">
-                <a href="" class="link menu__link">О нас</a>
-              </li>
-              <li class="list-item-reset">
-                <a href="" class="link menu__link">Экскурсии</a>
-              </li>
-              <li class="list-item-reset">
-                <a href="" class="link menu__link">Расписание</a>
-              </li>
-              <li class="list-item-reset">
-                <a href="" class="link menu__link">Контакты</a>
+
+              <li class="">
+                <a
+                  href="/"
+                  class="block px-6 py-3 text-indigo-brand no-underline transition-colors duration-200 hover:bg-fuchsia-brand hover:text-white"
+                >
+                  Остоженка - спящая красавица Москвы
+                </a>
               </li>
             </ul>
-          </nav>
-        </div>
-        <img src="../images/ostojenka_2.jpg" class="header__image" alt="" />
-        <div class="header__intro header__intro_align_left">
-          <h1 class="title title_align_left h1-title header__title">
-            Остоженка – спящая красавица Москвы
-          </h1>
-          <p class="caption caption_align_left header__caption">
-            пешеходная экскурсия по древнейшему району близ Кремля
-          </p>
-        </div>
-      </header>
-      <main>
-        <section class="overwiew">
-          <ul class="overview__list list-reset">
-            <li class="overview__item list-item-reset">
-              <div class="svg-wrapper">
-                <svg
-                  viewBox="0 0 63 63"
-                  width="50"
-                  fill="var(--accent-color)"
-                  stroke="none"
-                >
-                  <use href="../images/icons/sprite.svg#pedestrian" />
-                </svg>
-              </div>
+          </li>
 
-              <span class="overview__text"> Тип экскурсии: пешеходная </span>
-            </li>
+          <li class="">
+            <a
+              class="relative inline-block cursor-pointer px-6 py-3 text-white no-underline"
+            >
+              <span
+                class="relative after:absolute after:bottom-[-8px] after:left-0 after:h-0.5 after:w-0 after:bg-fuchsia-brand after:transition-all after:duration-300 hover:after:w-full"
+              >
+                Расписание
+              </span>
+            </a>
+          </li>
+          <li class="">
+            <a
+              class="relative inline-block cursor-pointer px-6 py-3 text-white no-underline"
+            >
+              <span
+                class="relative after:absolute after:bottom-[-8px] after:left-0 after:h-0.5 after:w-0 after:bg-fuchsia-brand after:transition-all after:duration-300 hover:after:w-full"
+              >
+                Контакты
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <img
+        src="/images/excursions/sretenka/Sretenskij-monastyr.jpg"
+        class="absolute inset-0 z-0 h-full w-full object-cover"
+        alt="Вид на Сретенский монастырь с высоты птичьего полета - авторская пешеходная экскурсия по Сретенке в Москве"
+      />
+      <div class="relative z-20 mx-auto max-w-4xl px-4 text-center">
+        <h1
+          class="mb-9 font-display text-5xl font-bold leading-tight text-white sm:text-6xl sm:leading-tight lg:text-7xl lg:leading-tight"
+        >
+          Остоженка-спящая красавица Москвы
+        </h1>
+        <p
+          class="mx-auto max-w-[80%] font-body text-xl leading-relaxed text-white md:text-xl lg:max-w-[60%] lg:leading-snug"
+        >
+          пешеходная экскурсия по Сретенке и ее переулкам
+        </p>
+      </div>
+    </header>
+    <main class="mx-auto">
+      <article class="mx-auto w-full max-w-7xl px-4 py-4 md:w-4/5">
+        <section class="w-full flex-col items-center justify-center">
+          <ul
+            class="flex flex-col gap-6 rounded-lg bg-indigo-50 px-5 py-10 md:grid md:grid-cols-2 md:gap-6 md:px-12 md:py-14"
+          >
+            <li class="flex items-center gap-6">
+              <svg
+                class="h-8 w-8 flex-shrink-0 text-indigo-brand"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <g fill="currentColor">
+                  <path
+                    d="M9.5 1.5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0M6.44 3.752A.75.75 0 0 1 7 3.5h1.445c.742 0 1.32.643 1.243 1.38l-.43 4.083a1.8 1.8 0 0 1-.088.395l-.318.906l.213.242a.8.8 0 0 1 .114.175l2 4.25a.75.75 0 1 1-1.357.638l-1.956-4.154l-1.68-1.921A.75.75 0 0 1 6 8.96l.138-2.613l-.435.489l-.464 2.786a.75.75 0 1 1-1.48-.246l.5-3a.75.75 0 0 1 .18-.375l2-2.25Z"
+                  />
+                  <path
+                    d="M6.25 11.745v-1.418l1.204 1.375l.261.524a.8.8 0 0 1-.12.231l-2.5 3.25a.75.75 0 1 1-1.19-.914zm4.22-4.215l-.494-.494l.205-1.843l.006-.067l1.124 1.124h1.44a.75.75 0 0 1 0 1.5H11a.75.75 0 0 1-.531-.22Z"
+                  />
+                </g>
+              </svg>
 
-            <li class="overview__item list-item-reset">
-              <div class="svg-wrapper">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="50"
-                  fill="var(--accent-color)"
-                  stroke="none"
-                  stroke-width="2"
-                >
-                  <use href="../images/icons/sprite.svg#hourglass" />
-                </svg>
-              </div>
-              <span class="overview__text"> Продолжительность: 2 часа </span>
-            </li>
-            <li class="overview__item list-item-reset">
-              <div class="svg-wrapper">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="50"
-                  fill="none"
-                  stroke="var(--accent-color)"
-                  stroke-width="2"
-                >
-                  <use href="../images/icons/sprite.svg#wallet" />
-                </svg>
-              </div>
-              <span class="overview__text"> Стоимость: бесплатно </span>
-            </li>
-
-            <li class="overview__item list-item-reset">
-              <div class="svg-wrapper">
-                <svg
-                  viewBox="0 0 23 23"
-                  width="50"
-                  fill="none"
-                  stroke="var(--accent-color)"
-                  stroke-width="2"
-                >
-                  <use href="../images/icons/sprite.svg#location" />
-                </svg>
-              </div>
-
-              <span class="overview__text">
-                Место встречи: на площади перед павильоном м. Кропоткинская
-                (выход №2)
+              <span class="font-body text-lg font-medium text-indigo-brand">
+                Тип экскурсии: пешеходная
               </span>
             </li>
-            <li class="overview__item list-item-reset">
-              <div class="svg-wrapper">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="50"
-                  fill="none"
-                  stroke="var(--accent-color)"
-                  stroke-width="2"
-                >
-                  <use href="../images/icons/sprite.svg#calendar" />
-                </svg>
-              </div>
+            <li class="flex items-center gap-6">
+              <svg
+                class="h-8 w-8 flex-shrink-0 text-indigo-brand"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5H0zm11.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM0 11v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1z"
+                />
+              </svg>
 
-              <span class="overview__text">
-                Ближайшие даты: смотрите календарь экскурсий
+              <span class="font-body text-lg font-medium text-indigo-brand">
+                Стоимость: бесплатно
+              </span>
+            </li>
+            <li class="flex items-center gap-6">
+              <svg
+                class="h-8 w-8 flex-shrink-0 text-indigo-brand"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5m9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5m-2.6 5.854a.5.5 0 0 0-.708-.708L7.5 10.793L6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"
+                />
+              </svg>
+
+              <span class="font-body text-lg font-medium text-indigo-brand">
+                Ближайшие даты: смотрите
+                <a href="#" class="font-semibold underline">
+                  расписание экскурсий
+                </a>
+              </span>
+            </li>
+            <li class="flex items-center gap-6">
+              <svg
+                class="h-8 w-8 flex-shrink-0 text-indigo-brand"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"
+                />
+              </svg>
+
+              <span class="font-body text-lg font-medium text-indigo-brand">
+                Продолжительность: 1,5 часа.
+              </span>
+            </li>
+            <li class="flex items-center gap-6">
+              <svg
+                class="h-8 w-8 flex-shrink-0 text-indigo-brand"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6a3 3 0 0 1 0 6"
+                />
+              </svg>
+
+              <span class="font-body text-lg font-medium text-indigo-brand">
+                Место встречи: у памятника инженеру В. Шухову (м. Сретенский
+                бульвар)
               </span>
             </li>
           </ul>
         </section>
-        <section class="description">
-          <div class="text-container">
-            <p class="title h4-title description__title">
-              Словно прекрасная спящая красавица из сказки, Остоженка хранит
-              свою красоту в течение многих веков. Вокруг бурлит жизнь, сменяют
-              друг друга времена и эпохи, перекраивается облик города. А район
-              Остожья по сей день остается для нас едва ли не последним
-              островком той самой, безвозвратно ушедшей, старой Москвы.
-            </p>
+        <div
+          class="text-gray-800-custom flex flex-col space-y-4 pb-10 pt-10 font-body text-xl"
+        >
+          <p>
+            Экскурсия-погружение, от которой захватывает дух, построенная на
+            контрастах и противоречиях.
+          </p>
+          <p>
+            Люди московского дна и православные святые, куртизанки и городовые,
+            цари и приказчики…
+          </p>
+          <p>
+            Словно цветные узоры калейдоскопа, москвичи всех времен предстанут
+            перед нами на этой прогулке.
+          </p>
+        </div>
 
-            <div class="description__photos-container">
-              <img
-                src="../images/ostojenka/ostojenka_1.jpg"
-                class="description__photo border-white box-shadow"
-                alt=""
-              />
-              <img
-                src="../images/ostojenka/ostojenka_3.jpg"
-                class="description__photo border-white box-shadow"
-                alt=""
-              />
-              <img
-                src="../images/ostojenka/ostojenka_2.jpg"
-                class="description__photo border-white box-shadow"
-                alt=""
-              />
-            </div>
+        <img
+          src="/images/excursions/sretenka/Сретенский бульвар_фото с крыши.jpg"
+          alt=""
+          class="mx-auto hidden w-4/5 rounded-lg max-[600px]:block"
+        />
 
-            <p class="text">
-              Остоженка словно застыла в сомнамбулическом сне, стала миражом,
-              который манит и притягивает любителей старины. Что было, что есть,
-              что будет? Остоженка даст ответы на все вопросы, стоит только
-              прислушаться к шепоту листвы ее старых тополей.
-            </p>
-
-            <h2 class="title h4-title description__title">
-              На пешеходной экскурсии по переулкам Остоженки мы прикоснемся к
-              разным временам.
-            </h2>
+        <div
+          class="mx-auto hidden w-3/5 pb-10 pt-10 min-[600px]:grid min-[600px]:grid-cols-2 min-[600px]:gap-4 lg:gap-6"
+        >
+          <div class="space-y-4 lg:space-y-6">
+            <img
+              src="/images/excursions/sretenka/Сретенский бульвар Москва.jpg"
+              alt=""
+              class="rounded-lg"
+            />
+            <img
+              src="/images/excursions/sretenka/Сретенка Москва_общий вид улицы.jpg"
+              alt=""
+              class="rounded-lg"
+            />
           </div>
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__copyright">&copy Волшебная Москва, 2025</p>
-      </footer>
-    </div>
-    <script src="../js/script.js"></script>
+          <div class="space-y-4 lg:space-y-6">
+            <img
+              src="/images/excursions/sretenka/Дом Страхового общества Россия на Сретенском бульваре в Москве.jpg"
+              alt=""
+              class="h-full rounded-lg object-cover"
+            />
+          </div>
+        </div>
+        <div
+          class="text-gray-800-custom flex flex-col space-y-4 pb-10 pt-10 font-body text-xl"
+        >
+          <p>Сретенский холм – это настоящий перекресток эпох.</p>
+          <p>
+            Буквально каждый дом в этом древнейшем районе Москвы хранит в себе
+            множество историй, драм и воспоминаний.
+          </p>
+          <p>
+            Вас ждет рассказ о высоком духовном подвиге и мелочном
+            мошенничестве, о личной жизни кумиров прошлого и настоящего,
+            городские байки и легенды.
+          </p>
+        </div>
+
+        <h2
+          class="mx-auto w-full pb-20 pt-8 text-center font-display text-4xl font-bold text-indigo-brand md:w-3/4"
+        >
+          На экскурсии по Сретенке и ее переулкам Вы увидите и узнаете:
+        </h2>
+        <div
+          class="md:pb-18 md:pt-18 flex flex-col items-center justify-center rounded-lg bg-indigo-50 pb-10 pl-4 pr-4 pt-10"
+        >
+          <ul class="flex w-full flex-col gap-8 md:w-3/4">
+            <li
+              class="text-gray-800-custom flex items-center gap-4 font-body text-xl"
+            >
+              <svg
+                class="h-6 w-6 flex-shrink-0 text-indigo-brand"
+                viewBox="0 0 512 512"
+                fill="currentColor"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                ></path>
+              </svg>
+              <p>
+                где, прямо по мостовой, «плыли» корабли (да-да, самые настоящие,
+                под парусами)
+              </p>
+            </li>
+            <li
+              class="text-gray-800-custom flex items-center gap-4 font-body text-xl"
+            >
+              <svg
+                class="h-6 w-6 flex-shrink-0 text-indigo-brand"
+                viewBox="0 0 512 512"
+                fill="currentColor"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                ></path>
+              </svg>
+              <p>
+                где заседали русские масоны и колдовал по ночам чернокнижник
+              </p>
+            </li>
+            <li
+              class="text-gray-800-custom flex items-center gap-4 font-body text-xl"
+            >
+              <svg
+                class="h-6 w-6 flex-shrink-0 text-indigo-brand"
+                viewBox="0 0 512 512"
+                fill="currentColor"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                ></path>
+              </svg>
+              <p>
+                в каком храме венчалась самая несчастная невеста Третьяковской
+                галереи
+              </p>
+            </li>
+            <li
+              class="text-gray-800-custom flex items-center gap-4 font-body text-xl"
+            >
+              <svg
+                class="h-6 w-6 flex-shrink-0 text-indigo-brand"
+                viewBox="0 0 512 512"
+                fill="currentColor"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                ></path>
+              </svg>
+              <p>
+                какой дом (один из немногих на всю Москву!) согласился не
+                сносить великий французский архитектор Ле Корбюзье
+              </p>
+            </li>
+            <li
+              class="text-gray-800-custom flex items-center gap-4 font-body text-xl"
+            >
+              <svg
+                class="h-6 w-6 flex-shrink-0 text-indigo-brand"
+                viewBox="0 0 512 512"
+                fill="currentColor"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                ></path>
+              </svg>
+              <p>
+                где находилась знаменитая Сухаревская башня, почему ее так
+                любили москвичи, и что сохранилось от нее сейчас
+              </p>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <section
+        class="relative my-10 flex w-full items-center justify-center overflow-hidden rounded py-10 md:py-20"
+      >
+        <div class="absolute inset-0 z-0 mx-auto max-w-[2000px]">
+          <img
+            src="/images/ostojenka_2.jpg"
+            class="h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="cta-with-bg absolute inset-0 z-10"></div>
+
+        <div
+          class="relative z-20 flex max-w-7xl flex-col items-center justify-center gap-4 px-6 min-[500px]:px-8 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-center md:w-4/5"
+        >
+          <div class="flex w-full flex-col pb-6">
+            <h3
+              class="pb-4 font-display text-2xl font-semibold text-white md:text-3xl"
+            >
+              Зарегистрируйтесь
+              <br />
+              на экскурсию
+            </h3>
+            <p class="text-l font-body text-white lg:w-4/5">
+              Экскурсия бесплатная, ближайшие даты смотрите в форме записи. До
+              встречи на прогулке!
+            </p>
+          </div>
+          <button
+            class="mx-4 rounded-full bg-fuchsia-brand px-6 py-3 text-sm font-normal uppercase tracking-wider text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-fuchsia-brand hover:to-indigo-brand hover:font-semibold hover:text-white"
+          >
+            записаться
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-fuchsia-brand px-4 py-8 text-white">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center gap-8 md:flex-row md:justify-center md:gap-16"
+      >
+        <a
+          href="/"
+          class="transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+        >
+          <img
+            src="/images/logo/logo_magic-moscow.png"
+            alt="Волшебная Москва - главная страница"
+            class="h-12 w-auto md:h-16"
+          />
+        </a>
+
+        <nav
+          aria-label="Разделы сайта"
+          class="flex flex-col items-center md:items-start"
+        >
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="/about"
+                class="relative inline-flex items-center gap-2 transition-all duration-200 hover:after:absolute hover:after:bottom-[-1px] hover:after:left-0 hover:after:h-px hover:after:w-full hover:after:bg-white"
+              >
+                Экскурсии
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/excursions"
+                class="relative inline-flex items-center gap-2 transition-all duration-200 hover:after:absolute hover:after:bottom-[-1px] hover:after:left-0 hover:after:h-px hover:after:w-full hover:after:bg-white"
+              >
+                Контакты
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contacts"
+                class="relative hover:after:absolute hover:after:bottom-[-1px] hover:after:left-0 hover:after:h-px hover:after:w-full hover:after:bg-white"
+              >
+                О гиде
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav
+          aria-label="Социальные сети"
+          class="flex flex-col items-center md:items-start"
+        >
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#"
+                class="relative flex items-center gap-2 transition-all duration-200"
+              >
+                <svg
+                  class="h-5 w-5 transition-transform hover:scale-110"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2V9h2v8z"
+                  />
+                </svg>
+                <span
+                  class="relative hover:after:absolute hover:after:bottom-[-1px] hover:after:left-0 hover:after:h-px hover:after:w-full hover:after:bg-white"
+                >
+                  Яндекс.Дзен
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="relative flex items-center gap-2 transition-all duration-200"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  class="h-5 w-5 transition-transform hover:scale-110"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.191l-1.83 8.725c-.129.586-.463.73-.935.455l-4.01-2.954-1.998 1.975c-.22.22-.406.406-.831.406l.297-4.173 7.442-6.741c.324-.288-.07-.448-.503-.161l-9.22 5.823-3.96-1.24c-.852-.266-.867-.852.18-1.261l15.412-5.93c.71-.249 1.33.172 1.097 1.261z"
+                  />
+                </svg>
+                <span
+                  class="relative hover:after:absolute hover:after:bottom-[-1px] hover:after:left-0 hover:after:h-px hover:after:w-full hover:after:bg-white"
+                >
+                  Телеграм
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="relative flex items-center gap-2 transition-all duration-200"
+              >
+                <svg
+                  class="h-5 w-5 transition-transform hover:scale-110"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
+                  />
+                </svg>
+
+                <span
+                  class="relative hover:after:absolute hover:after:bottom-[-1px] hover:after:left-0 hover:after:h-px hover:after:w-full hover:after:bg-white"
+                >
+                  Блог
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="mt-8 border-t border-white/20 pt-8 text-center text-sm">
+        &copy; Copyright Волшебная Москва, 2025
+      </p>
+    </footer>
+
+    <script src="/js/script.js"></script>
   </body>
 </html>
-<!-- <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-  <symbol id="location">
-    <path
-      d="M12 21c3.5-3.6 7-6.824 7-10.8C19 6.224 15.866 3 12 3s-7 3.224-7 7.2 3.5 7.2 7 10.8Z"
-    />
-    <path d="M12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-  </symbol>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-  <symbol id="pedestrian">
-    <path
-      d="M16.113 51.517c-.918 1.566-.868 3.498.705 4.66 1.346.992 3.742.863 4.662-.704 1.902-3.244 5.351-5.687 5.351-5.687s-1.27-2.798-1.871-8.041c-.001.001-6.683 6.079-8.847 9.772z"
-    />
-    <path
-      d="M43.244 23.299c-3.903-3.474-8.09-6.591-12.672-9.098a5.679 5.679 0 0 0-1.652-.86 3.355 3.355 0 0 0-1.165-.25 4.95 4.95 0 0 0-1.836.115c-1.523.408-2.551 1.34-3.136 2.526-2.823 3.297-5.181 6.88-7.297 10.666-2.101 3.756 3.657 7.117 5.756 3.364a85.842 85.842 0 0 1 2.038-3.469l1.824 12.311c.123.832.519 1.548 1.072 2.13.884 5.842 2.507 11.605 5.066 16.907 1.867 3.87 7.614.487 5.756-3.365-1.912-3.961-3.19-8.346-3.977-12.769 1.73-1.205 2.357-3.375 2.033-5.569-.602-4.052-1.201-8.106-1.803-12.159a66.124 66.124 0 0 1 5.275 4.234c3.207 2.845 7.938-1.852 4.718-4.714z"
-    />
-    <circle cx="27.254" cy="5.808" r="5.808" />
-  </symbol>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-  <symbol id="wallet">
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      d="M18 8v-.8c0-1.12 0-1.68-.218-2.108a2 2 0 0 0-.874-.874C16.48 4 15.92 4 14.8 4H6.2c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C3 5.52 3 6.08 3 7.2V8m18 4h-2a2 2 0 1 0 0 4h2M3 8v8.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874C4.52 20 5.08 20 6.2 20h11.6c1.12 0 1.68 0 2.108-.218a2 2 0 0 0 .874-.874C21 18.48 21 17.92 21 16.8v-5.6c0-1.12 0-1.68-.218-2.108a2 2 0 0 0-.874-.874C19.48 8 18.92 8 17.8 8H3Z"
-    />
-  </symbol>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-  <symbol id="hourglass">
-    <g>
-      <path
-        d="M9.418 18.54C10.19 17.399 11.284 16 12 16c.716 0 1.809 1.398 2.582 2.54.43.637-.038 1.46-.806 1.46h-3.552c-.768 0-1.237-.823-.806-1.46ZM12 9c.351 0 .986-.766 1.527-1.523C13.98 6.844 13.51 6 12.731 6H11.27c-.778 0-1.249.844-.796 1.477C11.014 8.234 11.649 9 12 9Z"
-      />
-      <path
-        fill-rule="evenodd"
-        d="M4 2a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2h-1.027c-.136 2.411-.763 4.239-1.683 5.74-.802 1.311-1.81 2.34-2.803 3.26.993.92 2.001 1.949 2.803 3.26.92 1.501 1.547 3.329 1.683 5.74H19a1 1 0 1 1 0 2H5a1 1 0 1 1 0-2h1.027c.136-2.411.763-4.239 1.683-5.74.802-1.311 1.81-2.34 2.803-3.26-.993-.92-2.001-1.949-2.803-3.26C6.79 7.24 6.163 5.412 6.027 3H5a1 1 0 0 1-1-1Zm11.97 19c-.132-2.049-.665-3.52-1.385-4.697-.698-1.139-1.59-2.039-2.585-2.953-.995.914-1.887 1.815-2.585 2.953-.72 1.177-1.253 2.648-1.384 4.697h7.938ZM8.03 3h7.94c-.132 2.049-.665 3.52-1.385 4.697-.698 1.138-1.59 2.039-2.585 2.953-.995-.914-1.887-1.815-2.585-2.953C8.695 6.52 8.162 5.049 8.031 3Z"
-        clip-rule="evenodd"
-      />
-    </g>
-  </symbol>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-  <symbol id="calendar">
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M3 9h18M9 15l2 2 4-4M7 3v2m10-2v2M6.2 21h11.6c1.12 0 1.68 0 2.108-.218a2 2 0 0 0 .874-.874C21 19.48 21 18.92 21 17.8V8.2c0-1.12 0-1.68-.218-2.108a2 2 0 0 0-.874-.874C19.48 5 18.92 5 17.8 5H6.2c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C3 6.52 3 7.08 3 8.2v9.6c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874C4.52 21 5.08 21 6.2 21Z"
-    />
-  </symbol>
-</svg> -->
