@@ -622,6 +622,26 @@ h1,
   top: 100%;
 }
 
+.left-\[-24px\] {
+  left: -24px;
+}
+
+.left-\[-224px\] {
+  left: -224px;
+}
+
+.left-\[-124px\] {
+  left: -124px;
+}
+
+.left-\[124px\] {
+  left: 124px;
+}
+
+.left-\[24px\] {
+  left: 24px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -636,10 +656,6 @@ h1,
 
 .z-30 {
   z-index: 30;
-}
-
-.z-40 {
-  z-index: 40;
 }
 
 .mx-4 {
@@ -685,16 +701,20 @@ h1,
   margin-top: 2.25rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .block {
   display: block;
 }
 
 .inline-block {
   display: inline-block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -895,10 +915,6 @@ h1,
   border-color: rgb(243 244 246 / var(--tw-divide-opacity, 1));
 }
 
-.self-center {
-  align-self: center;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1086,16 +1102,16 @@ h1,
   padding-top: 2rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .text-center {
   text-align: center;
 }
 
 .align-baseline {
   vertical-align: baseline;
-}
-
-.align-middle {
-  vertical-align: middle;
 }
 
 .font-body {
@@ -2500,59 +2516,19 @@ h1,
   position: absolute;
 }
 
-.after\:bottom-\[-1px\]::after {
-  content: var(--tw-content);
-  bottom: -1px;
-}
-
 .after\:bottom-\[-2px\]::after {
   content: var(--tw-content);
   bottom: -2px;
 }
 
-.after\:bottom-\[3px\]::after {
+.after\:bottom-\[-8px\]::after {
   content: var(--tw-content);
-  bottom: 3px;
+  bottom: -8px;
 }
 
 .after\:left-0::after {
   content: var(--tw-content);
   left: 0px;
-}
-
-.after\:left-1\/2::after {
-  content: var(--tw-content);
-  left: 50%;
-}
-
-.after\:bottom-\[-3px\]::after {
-  content: var(--tw-content);
-  bottom: -3px;
-}
-
-.after\:bottom-\[43px\]::after {
-  content: var(--tw-content);
-  bottom: 43px;
-}
-
-.after\:bottom-\[4px\]::after {
-  content: var(--tw-content);
-  bottom: 4px;
-}
-
-.after\:bottom-\[-4px\]::after {
-  content: var(--tw-content);
-  bottom: -4px;
-}
-
-.after\:bottom-\[-6px\]::after {
-  content: var(--tw-content);
-  bottom: -6px;
-}
-
-.after\:bottom-\[-8px\]::after {
-  content: var(--tw-content);
-  bottom: -8px;
 }
 
 .after\:h-0\.5::after {
@@ -2565,20 +2541,9 @@ h1,
   height: 0.25rem;
 }
 
-.after\:h-0::after {
-  content: var(--tw-content);
-  height: 0px;
-}
-
 .after\:w-0::after {
   content: var(--tw-content);
   width: 0px;
-}
-
-.after\:-translate-x-1\/2::after {
-  content: var(--tw-content);
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .after\:rounded::after {
@@ -2664,9 +2629,24 @@ h1,
   bottom: -1px;
 }
 
+.hover\:after\:bottom-\[-2px\]:hover::after {
+  content: var(--tw-content);
+  bottom: -2px;
+}
+
+.hover\:after\:bottom-\[-8px\]:hover::after {
+  content: var(--tw-content);
+  bottom: -8px;
+}
+
 .hover\:after\:left-0:hover::after {
   content: var(--tw-content);
   left: 0px;
+}
+
+.hover\:after\:h-0\.5:hover::after {
+  content: var(--tw-content);
+  height: 0.125rem;
 }
 
 .hover\:after\:h-px:hover::after {
@@ -2674,25 +2654,38 @@ h1,
   height: 1px;
 }
 
-.hover\:after\:w-\[50\%\]:hover::after {
-  content: var(--tw-content);
-  width: 50%;
-}
-
-.hover\:after\:w-\[75\%\]:hover::after {
-  content: var(--tw-content);
-  width: 75%;
-}
-
 .hover\:after\:w-full:hover::after {
   content: var(--tw-content);
   width: 100%;
+}
+
+.hover\:after\:w-0:hover::after {
+  content: var(--tw-content);
+  width: 0px;
+}
+
+.hover\:after\:bg-fuchsia-brand:hover::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 58 125 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:after\:bg-white:hover::after {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:after\:transition-all:hover::after {
+  content: var(--tw-content);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.hover\:after\:duration-300:hover::after {
+  content: var(--tw-content);
+  transition-duration: 300ms;
 }
 
 .group:hover .group-hover\:block {
@@ -2708,12 +2701,12 @@ h1,
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:hover .group-hover\:border-t-2 {
-  border-top-width: 2px;
-}
-
 .group:hover .group-hover\:border-t-4 {
   border-top-width: 4px;
+}
+
+.group:hover .group-hover\:border-t-2 {
+  border-top-width: 2px;
 }
 
 .group:hover .group-hover\:transition-transform {
