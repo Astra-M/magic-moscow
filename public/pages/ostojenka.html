@@ -558,159 +558,158 @@
       </section>
     </main>
 
-    <footer class="bg-fuchsia-brand px-4 py-8 text-white">
+    <footer class="mx-auto bg-fuchsia-brand px-4 py-8 text-white">
+      <!-- <div
+        class="flex w-full max-w-7xl  items-center justify-center gap-6 min-[400px]:flex-row min-[400px]:flex-wrap md:flex-nowrap md:items-center md:justify-center"
+      > -->
       <div
-        class="mx-auto flex max-w-7xl flex-col items-center gap-8 md:flex-row md:justify-center md:gap-16"
+        class="flex w-full max-w-7xl flex-col items-center justify-center gap-6 min-[400px]:flex-row min-[400px]:flex-wrap md:flex-nowrap md:items-center md:justify-center"
       >
-        <a
-          href="/"
-          class="transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+        <!-- <div
+          class="order-2 flex flex-col items-center gap-4 md:order-1 md:flex-row md:gap-6"
+        > -->
+        <div
+          class="order-2 flex flex-col min-[664px]:order-1 items-center gap-4 md:flex-row md:gap-6"
         >
-          <img
-            src="/images/logo/logo_magic-moscow.png"
-            alt="Волшебная Москва - главная страница"
-            class="h-12 w-auto md:h-16"
-          />
-        </a>
-
-        <!-- <nav
-          aria-label="Социальные сети"
-          class="flex flex-col items-center md:items-start"
+          <a
+            href="/"
+            class="transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+          >
+            <img
+              src="/images/logo/logo_magic-moscow.png"
+              alt="Волшебная Москва - главная страница"
+              class="w-20 flex-shrink-0"
+            />
+          </a>
+          <p class="flex-1">
+            Душевные прогулки по Москве
+            <br />
+            с аккредитованным гидом
+          </p>
+        </div>
+        <!-- <div
+          class="order-1 flex flex-col gap-6 min-[400px]:flex-row md:order-2"
+        > -->
+        <div
+          class="order-1 flex flex-col gap-6 min-[664px]:order-2 min-[400px]:flex-row "
         >
-          <ul class="space-y-2"> -->
+          <nav
+            aria-label="Разделы сайта"
+            class="orger-1 flex flex-col items-center min-[400px]:order-2 md:items-start"
+          >
+            <ul class="space-y-2">
+              <li class="">
+                <a
+                  href="#"
+                  class="inline-block px-6 py-2 text-white no-underline"
+                >
+                  <span
+                    class="relative after:w-0 hover:after:absolute hover:after:bottom-[-4px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-white hover:after:transition-all hover:after:duration-300"
+                  >
+                    Экскурсии
+                  </span>
+                </a>
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="inline-block px-6 py-2 text-white no-underline"
+                >
+                  <span
+                    class="relative after:w-0 hover:after:absolute hover:after:bottom-[-4px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-white hover:after:transition-all hover:after:duration-300"
+                  >
+                    Контакты
+                  </span>
+                </a>
+              </li>
 
-        <nav
-          aria-label="Разделы сайта"
-          class="flex flex-col items-center md:items-start"
-        >
-          <ul class="space-y-2">
-            <li class="">
-              <a
-                href="#"
-                class="inline-block px-6 py-2 text-white no-underline"
-              >
-                <span
-                  class="relative after:w-0 hover:after:absolute hover:after:bottom-[-4px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-white hover:after:transition-all hover:after:duration-300"
+              <li class="">
+                <a
+                  href="#"
+                  class="inline-block px-6 py-2 text-white no-underline"
                 >
-                  Экскурсии
-                </span>
-              </a>
-            </li>
-            <li class="">
-              <a
-                href="#"
-                class="inline-block px-6 py-2 text-white no-underline"
-              >
-                <span
-                  class="relative after:w-0 hover:after:absolute hover:after:bottom-[-4px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-white hover:after:transition-all hover:after:duration-300"
-                >
-                  Контакты
-                </span>
-              </a>
-            </li>
+                  <span
+                    class="relative after:w-0 hover:after:absolute hover:after:bottom-[-4px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-white hover:after:transition-all hover:after:duration-300"
+                  >
+                    О гиде
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-            <!-- <li>
-              <a
-                href="/excursions"
-                class="relative inline-flex items-center gap-2 transition-all duration-200 hover:after:absolute hover:after:bottom-[-1px] hover:after:left-0 hover:after:h-px hover:after:w-full hover:after:bg-white"
-              >
-                Контакты
-              </a>
-            </li>
-            <li> -->
-            <li class="">
-              <a
-                href="#"
-                class="inline-block px-6 py-2 text-white no-underline"
-              >
-                <span
-                  class="relative after:w-0 hover:after:absolute hover:after:bottom-[-4px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-white hover:after:transition-all hover:after:duration-300"
+          <nav
+            aria-label="Социальные сети"
+            class="order-1 flex flex-col items-start min-[400px]:order-2 md:items-start"
+          >
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="relative flex items-center gap-2 px-6 py-2 transition-all duration-200"
                 >
-                  О гиде
-                </span>
-              </a>
-            </li>
-            <!-- <a
-                href="/contacts"
-                class="relative hover:after:absolute hover:after:bottom-[-1px] hover:after:left-0 hover:after:h-px hover:after:w-full hover:after:bg-white"
-              >
-                О гиде
-              </a>
-            </li> -->
-          </ul>
-        </nav>
+                  <svg
+                    class="h-5 w-5 transition-transform hover:scale-110"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2V9h2v8z"
+                    />
+                  </svg>
+                  <span
+                    class="relative after:w-0 hover:after:absolute hover:after:bottom-[-4px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-white hover:after:transition-all hover:after:duration-300"
+                  >
+                    Яндекс.Дзен
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="relative flex items-center gap-2 px-6 py-2 transition-all duration-200"
+                >
+                  <svg
+                    class="h-5 w-5 transition-transform hover:scale-110"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.191l-1.83 8.725c-.129.586-.463.73-.935.455l-4.01-2.954-1.998 1.975c-.22.22-.406.406-.831.406l.297-4.173 7.442-6.741c.324-.288-.07-.448-.503-.161l-9.22 5.823-3.96-1.24c-.852-.266-.867-.852.18-1.261l15.412-5.93c.71-.249 1.33.172 1.097 1.261z"
+                    />
+                  </svg>
+                  <span
+                    class="relative after:w-0 hover:after:absolute hover:after:bottom-[-4px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-white hover:after:transition-all hover:after:duration-300"
+                  >
+                    Телеграм
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="relative flex items-center gap-2 px-6 py-2 transition-all duration-200"
+                >
+                  <svg
+                    class="h-5 w-5 transition-transform hover:scale-110"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
+                    />
+                  </svg>
 
-        <nav
-          aria-label="Социальные сети"
-          class="flex flex-col items-center md:items-start"
-        >
-          <ul class="space-y-2">
-            <li>
-              <a
-                href="#"
-                class="relative flex items-center gap-2 px-6 py-2 transition-all duration-200"
-              >
-                <svg
-                  class="h-5 w-5 transition-transform hover:scale-110"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2V9h2v8z"
-                  />
-                </svg>
-                <span
-                  class="relative after:w-0 hover:after:absolute hover:after:bottom-[-4px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-white hover:after:transition-all hover:after:duration-300"
-                >
-                  Яндекс.Дзен
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="relative flex items-center gap-2 px-6 py-2 transition-all duration-200"
-              >
-                <svg
-                  class="h-5 w-5 transition-transform hover:scale-110"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.191l-1.83 8.725c-.129.586-.463.73-.935.455l-4.01-2.954-1.998 1.975c-.22.22-.406.406-.831.406l.297-4.173 7.442-6.741c.324-.288-.07-.448-.503-.161l-9.22 5.823-3.96-1.24c-.852-.266-.867-.852.18-1.261l15.412-5.93c.71-.249 1.33.172 1.097 1.261z"
-                  />
-                </svg>
-                <span
-                  class="relative after:w-0 hover:after:absolute hover:after:bottom-[-4px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-white hover:after:transition-all hover:after:duration-300"
-                >
-                  Телеграм
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="relative flex items-center gap-2 px-6 py-2 transition-all duration-200"
-              >
-                <svg
-                  class="h-5 w-5 transition-transform hover:scale-110"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
-                  />
-                </svg>
-
-                <span
-                  class="relative after:w-0 hover:after:absolute hover:after:bottom-[-4px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-white hover:after:transition-all hover:after:duration-300"
-                >
-                  Блог
-                </span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+                  <span
+                    class="relative after:w-0 hover:after:absolute hover:after:bottom-[-4px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-white hover:after:transition-all hover:after:duration-300"
+                  >
+                    Блог
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
       <p class="mt-8 border-t border-white/20 pt-8 text-center text-sm">
