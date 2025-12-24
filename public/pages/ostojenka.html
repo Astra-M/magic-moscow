@@ -107,7 +107,7 @@
       >
         <a
           href="/"
-          class="transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+          class="flex-shrink-0 transition-all duration-300 hover:-translate-y-1 hover:scale-105"
         >
           <img
             src="/images/logo/logo_magic-moscow.png"
@@ -124,10 +124,157 @@
           <span class="burger__line"></span>
         </div>
 
-        <ul
+        <!-- <ul class="flex flex-col gap-8">
+            <li class="">
+              <a href="#" class="inline-block text-4xl text-white">О гиде</a>
+            </li>
+            <li class="">
+              <a href="#" class="inline-block text-4xl text-white">Экскурсии</a>
+            </li>
+          </ul> -->
+
+        <!-- <ul
+          class="fixed inset-0 flex w-full flex-col items-center justify-center bg-fuchsia-brand"
+        >
+          <li class="py-4 text-center">
+            <a href="#" class="inline-block text-3xl text-white">О гиде</a>
+          </li>
+          <li class="py-4 text-center">
+            <a href="#" class="inline-block text-3xl text-white">Экскурсии</a>
+          </li>
+        </ul> -->
+        <!-- <ul
+          class="
+          flex h-screen w-full flex-col  bg-fuchsia-brand transition-all duration-500"
+        > -->
+        <!-- <ul
+          class="mobile-menu fixed left-[-100%] top-0 flex h-screen w-full flex-col justify-center bg-fuchsia-brand px-8"
+        >
+          <li class="mx-auto max-w-7xl">
+            <a href="#" class="block text-xl text-white hover:text-blue-200">
+              О гиде
+            </a>
+          </li>
+          <li class="mx-auto max-w-7xl">
+            <a href="#" class="block text-xl text-white hover:text-blue-200">
+              Экскурсии
+            </a>
+          </li>
+        </ul> -->
+        <!-- <ul
+          class="mobile-menu mx-auto fixed left-[-100%] justify-center h-screen top-0 flex flex-col gap-6 rounded-lg bg-fuchsia-brand p-8"
+        >
+          <li>
+            <a href="#" class="block text-xl text-white hover:text-blue-200">
+              О гиде
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block text-xl text-white hover:text-blue-200">
+              Экскурсии
+            </a>
+          </li>
+        </ul> -->
+        <nav
+          class="mobile-menu fixed left-[-100%] top-0 mx-auto flex min-h-screen w-full items-center justify-center bg-fuchsia-brand transition-all duration-500"
+        >
+          <!-- <ul class="flex flex-col gap-6 rounded-lg bg-white p-8 shadow-lg"></ul> -->
+          <ul class="flex flex-col gap-6">
+            <li class="">
+              <a href="#" class="text-white no-underline">
+                <span
+                  class="relative inline-block after:w-0 hover:after:absolute hover:after:bottom-[-8px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-fuchsia-brand hover:after:transition-all hover:after:duration-300"
+                >
+                  <svg
+                    class="h-6 w-6 fill-current align-baseline"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M8 1L1 7v8h5v-5h4v5h5V7z" />
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block text-3xl text-white hover:text-blue-600">
+                Экскурсии
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block text-3xl text-white hover:text-blue-600">
+                Расписание
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block text-3xl text-white hover:text-blue-600">
+                О гиде
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block text-3xl text-white hover:text-blue-600">
+                Контакты
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block text-3xl text-white hover:text-blue-600">
+                Блог
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- <ul
           class="mobile-menu fixed left-[-100%] top-0 flex h-screen w-full flex-col items-center justify-center bg-fuchsia-brand transition-all duration-500"
         >
-          <li class="px-6 py-3">
+          <li class="w-full px-6 py-3 text-center">
+            <a
+              href="/"
+              class="relative inline-block text-left text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              <svg
+                class="h-10 w-8 fill-current align-baseline"
+                viewBox="0 0 16 20"
+              >
+                <path d="M8 1L1 7v8h5v-5h4v5h5V7z" />
+              </svg>
+            </a>
+          </li>
+          <li class="w-full px-6 py-3 text-center">
+            <a
+              href="/"
+              class="relative inline-block text-left text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              О гиде
+            </a>
+          </li>
+          <li class="w-full px-6 py-3 text-center">
+            <a
+              href="/"
+              class="relative inline-block text-left text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              Экскурсии
+            </a>
+          </li>
+          <li class="w-full px-6 py-3 text-center">
+            <a
+              href="/"
+              class="relative inline-block text-left text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              Расписание
+            </a>
+          </li>
+          <li class="w-full px-6 py-3 text-center">
+            <a
+              href="/"
+              class="relative inline-block text-left text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+            >
+              Контакты
+            </a>
+          </li>
+        </ul> -->
+        <!-- <ul
+          class="mobile-menu fixed left-[-100%] top-0 flex h-screen w-full flex-col items-center justify-center bg-fuchsia-brand transition-all duration-500"
+        >
+          <li class="px-6 py-3  flex justify-center w-full text-left">
             <a
               href="/"
               class="relative flex items-center text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
@@ -140,45 +287,45 @@
               </svg>
             </a>
           </li>
-          <li class="px-6 py-3">
+          <li class="px-6 py-3 flex justify-center w-full text-left">
             <a
               href="/"
-              class="relative inline-flex text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+              class="relative flex text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
             >
               О гиде
             </a>
           </li>
-          <li class="px-6 py-3">
+          <li class="px-6 py-3 flex justify-center w-full text-left">
             <a
               href="/"
-              class="relative inline-flex text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+              class="relative flex text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
             >
               Экскурсии
             </a>
           </li>
-          <li class="px-6 py-3">
+          <li class="px-6 py-3 flex justify-center w-full text-left">
             <a
               href="/"
-              class="relative inline-flex text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+              class="relative flex text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
             >
               Расписание
             </a>
           </li>
-          <li class="px-6 py-3">
+          <li class="px-6 py-3 flex justify-center w-full text-left">
             <a
               href="/"
-              class="relative inline-flex text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
+              class="relative flex text-white no-underline transition-all duration-300 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-1 after:w-0 after:rounded after:bg-fuchsia-brand after:transition-all after:duration-300 hover:-translate-y-0.5 hover:scale-105 hover:text-white hover:after:w-full max-[805px]:text-3xl"
             >
               Контакты
             </a>
           </li>
-        </ul>
+        </ul> -->
 
         <ul
           class="desktop-menu hidden max-[804px]:hidden min-[805px]:flex min-[805px]:h-12 min-[805px]:items-center min-[805px]:gap-3"
         >
           <li class="">
-            <a href="#" class="px-6 py-3 text-white no-underline">
+            <a href="#" class="px-5 py-3 text-white no-underline">
               <span
                 class="relative inline-block after:w-0 hover:after:absolute hover:after:bottom-[-8px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-fuchsia-brand hover:after:transition-all hover:after:duration-300"
               >
@@ -191,23 +338,30 @@
               </span>
             </a>
           </li>
-          <li class="">
-            <a href="#" class="px-6 py-3 text-white no-underline">
-              <span
-                class="relative after:w-0 hover:after:absolute hover:after:bottom-[-8px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-fuchsia-brand hover:after:transition-all hover:after:duration-300"
-              >
-                О гиде
-              </span>
-            </a>
-          </li>
 
           <li class="group relative">
-            <a href="#" class="inline-block px-6 py-3 text-white no-underline">
-              <span
-                class="relative after:w-0 hover:after:absolute hover:after:bottom-[-8px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-fuchsia-brand hover:after:transition-all hover:after:duration-300"
+            <a href="#" class="inline-block px-5 py-3 text-white no-underline">
+              <!-- <a href="#" class="inline-block px-6 py-3 text-white no-underline"> -->
+              <div
+                class="relative inline-flex items-center gap-1 after:w-0 hover:after:absolute hover:after:bottom-[-8px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-fuchsia-brand hover:after:transition-all hover:after:duration-300"
               >
-                Экскурсии
-              </span>
+                <span class="">
+                  <!-- <span
+                class="relative after:w-0 hover:after:absolute hover:after:bottom-[-8px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-fuchsia-brand hover:after:transition-all hover:after:duration-300" 
+                > -->
+                  Экскурсии
+                </span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M4 6L8 10L12 6" />
+                </svg>
+              </div>
             </a>
             <ul
               class="absolute left-[24px] top-full z-30 hidden min-w-[300px] divide-y divide-gray-100 border-fuchsia-brand bg-white shadow-lg group-hover:block group-hover:origin-left group-hover:scale-x-100 group-hover:border-t-2 group-hover:transition-transform group-hover:duration-300"
@@ -215,7 +369,7 @@
               <li class="">
                 <a
                   href="/"
-                  class="block px-6 py-3 text-indigo-brand no-underline transition-colors duration-200 hover:bg-fuchsia-brand hover:text-white"
+                  class="block px-5 py-3 text-indigo-brand no-underline transition-colors duration-200 hover:bg-fuchsia-brand hover:text-white"
                 >
                   Куртизанки и святые на Сретенском холме
                 </a>
@@ -224,7 +378,7 @@
               <li class="">
                 <a
                   href="/"
-                  class="block px-6 py-3 text-indigo-brand no-underline transition-colors duration-200 hover:bg-fuchsia-brand hover:text-white"
+                  class="block px-5 py-3 text-indigo-brand no-underline transition-colors duration-200 hover:bg-fuchsia-brand hover:text-white"
                 >
                   Остоженка - спящая красавица Москвы
                 </a>
@@ -233,7 +387,7 @@
           </li>
 
           <li class="">
-            <a href="#" class="px-6 py-3 text-white no-underline">
+            <a href="#" class="px-5 py-3 text-white no-underline">
               <span
                 class="relative after:w-0 hover:after:absolute hover:after:bottom-[-8px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-fuchsia-brand hover:after:transition-all hover:after:duration-300"
               >
@@ -242,7 +396,16 @@
             </a>
           </li>
           <li class="">
-            <a href="#" class="px-6 py-3 text-white no-underline">
+            <a href="#" class="px-5 py-3 text-white no-underline">
+              <span
+                class="relative after:w-0 hover:after:absolute hover:after:bottom-[-8px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-fuchsia-brand hover:after:transition-all hover:after:duration-300"
+              >
+                О гиде
+              </span>
+            </a>
+          </li>
+          <li class="">
+            <a href="#" class="px-5 py-3 text-white no-underline">
               <span
                 class="relative after:w-0 hover:after:absolute hover:after:bottom-[-8px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-fuchsia-brand hover:after:transition-all hover:after:duration-300"
               >
@@ -250,10 +413,19 @@
               </span>
             </a>
           </li>
+          <li class="">
+            <a href="#" class="px-5 py-3 text-white no-underline">
+              <span
+                class="relative after:w-0 hover:after:absolute hover:after:bottom-[-8px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-fuchsia-brand hover:after:transition-all hover:after:duration-300"
+              >
+                Блог
+              </span>
+            </a>
+          </li>
         </ul>
       </nav>
       <img
-        src="/images/excursions/sretenka/Sretenskij-monastyr.jpg"
+        src="/images/excursions/ostojenka/ostojenka_2.jpg"
         class="absolute inset-0 z-0 h-full w-full object-cover"
         alt="Вид на Сретенский монастырь с высоты птичьего полета - авторская пешеходная экскурсия по Сретенке в Москве"
       />
@@ -526,7 +698,7 @@
       >
         <div class="absolute inset-0 z-0 mx-auto max-w-[2000px]">
           <img
-            src="/images/ostojenka_2.jpg"
+            src="/images/excursions/ostojenka/ostojenka_2.jpg"
             class="h-full w-full object-cover"
           />
         </div>
@@ -559,17 +731,11 @@
     </main>
 
     <footer class="mx-auto bg-fuchsia-brand px-4 py-8 text-white">
-      <!-- <div
-        class="flex w-full max-w-7xl  items-center justify-center gap-6 min-[400px]:flex-row min-[400px]:flex-wrap md:flex-nowrap md:items-center md:justify-center"
-      > -->
       <div
         class="flex w-full max-w-7xl flex-col items-center justify-center gap-6 min-[400px]:flex-row min-[400px]:flex-wrap md:flex-nowrap md:items-center md:justify-center"
       >
-        <!-- <div
-          class="order-2 flex flex-col items-center gap-4 md:order-1 md:flex-row md:gap-6"
-        > -->
         <div
-          class="order-2 flex flex-col min-[664px]:order-1 items-center gap-4 md:flex-row md:gap-6"
+          class="order-2 flex flex-col items-center gap-4 min-[664px]:order-1 md:flex-row md:gap-6"
         >
           <a
             href="/"
@@ -587,11 +753,9 @@
             с аккредитованным гидом
           </p>
         </div>
-        <!-- <div
-          class="order-1 flex flex-col gap-6 min-[400px]:flex-row md:order-2"
-        > -->
+
         <div
-          class="order-1 flex flex-col gap-6 min-[664px]:order-2 min-[400px]:flex-row "
+          class="order-1 flex flex-col gap-6 min-[400px]:flex-row min-[664px]:order-2"
         >
           <nav
             aria-label="Разделы сайта"
