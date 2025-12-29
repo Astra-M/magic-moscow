@@ -1905,6 +1905,17 @@ h1,
 .mobile-menu {
 }
 
+/* .mobile-menu__submenu {
+  display: none;
+}
+
+.mobile-menu__submenu--opened {
+  max-height: 500px;
+} */
+
+.mobile-menu {
+}
+
 .mobile-menu__submenu {
   display: block;
   max-height: 0;

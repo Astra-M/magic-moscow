@@ -581,18 +581,25 @@
 
 .mobile-menu {
 }
+/* .mobile-menu__submenu {
+  display: none;
+}
+
+.mobile-menu__submenu--opened {
+  max-height: 500px;
+} */
+.mobile-menu {
+}
 .mobile-menu__submenu {
-  display: block; 
+  display: block;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
 
-
 .mobile-menu__submenu--opened {
   max-height: 500px;
 }
-
 
 @media (max-width: 805px) {
   .mobile-menu_opened {
