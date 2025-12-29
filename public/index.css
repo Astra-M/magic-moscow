@@ -606,7 +606,9 @@
     left: 0;
   }
 }
-
+.mobile-menu__subitem--active {
+  background-color: #db2777;
+}
 /* .menu__list {
   display: flex;
   align-items: center;

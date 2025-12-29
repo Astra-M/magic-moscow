@@ -1933,6 +1933,10 @@ h1,
   }
 }
 
+.mobile-menu__subitem--active {
+  background-color: #db2777;
+}
+
 /* .menu__list {
   display: flex;
   align-items: center;
@@ -2724,6 +2728,15 @@ h1,
 .hover\:after\:duration-300:hover::after {
   content: var(--tw-content);
   transition-duration: 300ms;
+}
+
+.active\:rounded-sm:active {
+  border-radius: 0.125rem;
+}
+
+.active\:bg-pink-600:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 39 119 / var(--tw-bg-opacity, 1));
 }
 
 .active\:bg-white\/10:active {
