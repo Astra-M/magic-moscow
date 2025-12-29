@@ -830,10 +830,6 @@ h1,
   max-width: 80%;
 }
 
-.max-w-\[70\%\] {
-  max-width: 70%;
-}
-
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -844,10 +840,6 @@ h1,
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.flex-row {
-  flex-direction: row;
 }
 
 .flex-col {
@@ -874,6 +866,14 @@ h1,
   justify-content: space-between;
 }
 
+.gap-0 {
+  gap: 0px;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-16 {
   gap: 4rem;
 }
@@ -892,10 +892,6 @@ h1,
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .space-y-12 > :not([hidden]) ~ :not([hidden]) {
@@ -927,10 +923,6 @@ h1,
   border-color: rgb(243 244 246 / var(--tw-divide-opacity, 1));
 }
 
-.self-end {
-  align-self: flex-end;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -945,6 +937,10 @@ h1,
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
 .border {
@@ -984,6 +980,11 @@ h1,
   background-color: rgb(238 242 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-pink-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 39 119 / var(--tw-bg-opacity, 1));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
@@ -1017,6 +1018,10 @@ h1,
   padding: 0.5rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -1025,8 +1030,9 @@ h1,
   padding: 1.5rem;
 }
 
-.p-8 {
-  padding: 2rem;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-4 {
@@ -1042,11 +1048,6 @@ h1,
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .py-10 {
@@ -1904,6 +1905,17 @@ h1,
 .mobile-menu {
 }
 
+.mobile-menu__submenu {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-menu__submenu--opened {
+  max-height: 500px;
+}
+
 @media (max-width: 805px) {
   .mobile-menu_opened {
     left: 0;
@@ -2634,16 +2646,6 @@ h1,
   font-weight: 600;
 }
 
-.hover\:text-blue-200:hover {
-  --tw-text-opacity: 1;
-  color: rgb(191 219 254 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-blue-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity, 1));
-}
-
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -2711,6 +2713,10 @@ h1,
 .hover\:after\:duration-300:hover::after {
   content: var(--tw-content);
   transition-duration: 300ms;
+}
+
+.active\:bg-white\/10:active {
+  background-color: rgb(255 255 255 / 0.1);
 }
 
 .group:hover .group-hover\:block {

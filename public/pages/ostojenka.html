@@ -124,16 +124,40 @@
           <span class="burger__line"></span>
         </div>
 
-        <nav
-          class="mobile-menu fixed left-[-100%] top-0 mx-auto flex min-h-screen w-full items-center justify-center bg-fuchsia-brand transition-all duration-500"
+        <!-- <div
+          class="fixed inset-0 flex items-center justify-center bg-fuchsia-brand"
         >
-          <!-- <ul class="flex flex-col gap-6 rounded-lg bg-white p-8 shadow-lg"></ul> -->
-          <ul class="flex flex-col gap-6">
-            <li class="">
-              <a href="#" class="text-white no-underline">
-                <span
-                  class="relative inline-block after:w-0 hover:after:absolute hover:after:bottom-[-8px] hover:after:left-0 hover:after:h-0.5 hover:after:w-full hover:after:bg-fuchsia-brand hover:after:transition-all hover:after:duration-300"
-                >
+          <ul class="flex flex-col gap-8">
+            <li class="text-center">
+              <a href="#" class="inline-block text-left text-3xl text-white">
+                О гиде
+              </a>
+            </li>
+            <li class="text-center">
+              <a href="#" class="inline-block text-left text-3xl text-white">
+                Экскурсии
+              </a>
+            </li>
+            <li class="text-left">
+              <a href="#" class="inline-block text-left text-3xl text-white">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div> -->
+        <!-- <div
+          class="mobile-menu fixed left-[-100%] top-0 flex min-h-screen w-full items-center justify-center bg-fuchsia-brand transition-all duration-500"
+        > -->
+        <div
+          class="mobile-menu fixed left-0 top-0 flex min-h-screen w-full items-center justify-center bg-fuchsia-brand transition-all duration-500"
+        >
+          <!-- <ul
+            class="flex w-full flex-col gap-1 bg-fuchsia-brand"
+          > -->
+          <ul class="flex w-full flex-col gap-1 bg-fuchsia-brand">
+            <li class="flex flex-col text-left">
+              <a href="#" class="inline-block px-6 py-3 text-2xl text-white">
+                <span class="inline-block">
                   <svg
                     class="h-6 w-6 fill-current align-baseline"
                     viewBox="0 0 16 16"
@@ -143,42 +167,159 @@
                 </span>
               </a>
             </li>
-            <li>
-              <a href="#" class="block text-3xl text-white hover:text-blue-600">
-                Экскурсии
+
+            <!-- <li
+              class="mobile-menu__item mobile-menu__item--excursions text-left"
+            > -->
+            <li
+              class="mobile-menu__item mobile-menu__item--excursions flex flex-col text-left"
+            >
+              <a href="#" class="inline-block px-6 py-3 text-2xl text-white">
+                <!-- <a href="#" class="inline-block p-6 text-2xl text-white"></a> -->
+                <div class="flex items-center justify-between gap-4">
+                  <span class="">Экскурсии</span>
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M4 6L8 10L12 6" />
+                  </svg>
+                </div>
               </a>
+              <ul
+                class="mobile-menu__submenu mobile-menu__submenu--opened"
+              >
+                 <!-- <ul
+                class="mobile-menu__submenu mobile-menu__submenu--opened flex flex-col gap-0"
+              > -->
+                <li class="rounded-sm bg-pink-600 p-3">
+                  <a href="" class="inline-block px-6 text-white">
+                    Куртизанки и святые на Сретенском холме
+                  </a>
+                </li>
+                <li class="rounded-sm bg-pink-600 p-3">
+                  <a href="" class="inline-block px-6 text-white">
+                    Остоженка - спящая красавица Москвы
+                  </a>
+                </li>
+                <li class="p-3">
+                  <a href="" class="inline-block px-6 text-white">
+                    Под соснами, в бору: Воронцово поле
+                  </a>
+                </li>
+                <li class="rounded-sm bg-pink-600 p-3">
+                  <a href="" class="inline-block px-6 text-white">
+                    Душа Замоскворечья: путешествие по Пятницкой
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a href="#" class="block text-3xl text-white hover:text-blue-600">
-                Расписание
-              </a>
-            </li>
-            <li>
-              <a href="#" class="block text-3xl text-white hover:text-blue-600">
+            <!-- <a href="#" class="inline-block p-6 text-2xl text-white">
+                <div class="flex items-center gap-4"> -->
+            <li class="text-left">
+              <a
+                href="#"
+                class="inline-block px-6 py-3 text-left text-2xl text-white"
+              >
                 О гиде
               </a>
             </li>
-            <li>
-              <a href="#" class="block text-3xl text-white hover:text-blue-600">
+            <li class="text-left">
+              <a href="#" class="inline-block px-6 py-3 text-2xl text-white">
+                Расписание
+              </a>
+            </li>
+            <li class="text-left">
+              <a href="#" class="inline-block px-6 py-3 text-2xl text-white">
                 Контакты
               </a>
             </li>
-            <li>
-              <a href="#" class="block text-3xl text-white hover:text-blue-600">
+            <li class="text-left">
+              <a href="#" class="inline-block px-6 py-3 text-2xl text-white">
                 Блог
               </a>
             </li>
           </ul>
-          <svg
-            class="h-5 w-5 transition-transform hover:scale-110"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2V9h2v8z"
-            />
-          </svg>
-        </nav>
+        </div>
+        <!-- <div
+          class="mobile-menu fixed inset-0 flex min-h-screen w-full items-center justify-center bg-fuchsia-brand transition-all duration-500"
+        > -->
+        <!-- <div
+          class="mobile-menu fixed inset-0 flex items-center justify-center bg-fuchsia-brand"
+        > -->
+        <!-- <ul class="flex flex-col gap-6 bg-fuchsia-brand px-4">
+            <li class="text-left">
+              <a href="#" class="inline-block px-4 py-3 text-white">
+                <span class="inline-block">
+                  <svg
+                    class="h-6 w-6 fill-current align-baseline"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M8 1L1 7v8h5v-5h4v5h5V7z" />
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="mobile-menu__item mobile-menu__item--excursions">
+              <a
+                href="#"
+                class="inline-block px-4 py-3 text-2xl text-white active:bg-white/10"
+              >
+                <div class="flex items-center gap-4">
+                  <span class="">Экскурсии</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M4 6L8 10L12 6" />
+                  </svg>
+                </div>
+              </a>
+
+              <ul class="mobile-menu__submenu">
+                <li class="">
+                  <a href="/" class="inline-block px-4 py-3 text-white">
+                    Куртизанки и святые на Сретенском холме
+                  </a>
+                </li>
+
+                <li class="">
+                  <a href="/" class="block px-4 py-3 text-white">
+                    Остоженка - спящая красавица Москвы
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="">
+              <a href="#" class="inline-block px-3 py-3 text-2xl text-white">
+                <span>Расписание</span>
+              </a>
+            </li>
+            <li class="">
+              <a href="#" class="px-3 py-3 text-2xl text-white">
+                <span>О гиде</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="px-3 py-3 text-2xl text-white">
+                <span>Контакты</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="px-3 py-3 text-2xl text-white">
+                <span>Блог</span>
+              </a>
+            </li>
+          </ul> -->
 
         <ul
           class="desktop-menu hidden max-[804px]:hidden min-[805px]:flex min-[805px]:h-12 min-[805px]:items-center min-[805px]:gap-3"
@@ -640,11 +781,6 @@
             </ul>
           </nav>
 
-          <!-- <div
-            aria-label="Социальные сети"
-            class="order-1 flex flex-col items-start min-[400px]:order-2 md:items-start"
-          > -->
-          <!-- <ul class="space-y-2"> -->
           <ul
             aria-label="Социальные сети"
             class="order-1 flex flex-col items-start space-y-2 min-[400px]:order-2 md:items-start"
@@ -714,7 +850,6 @@
               </a>
             </li>
           </ul>
-          <!-- </div> -->
         </div>
       </div>
 
