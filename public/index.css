@@ -259,8 +259,14 @@
   -moz-osx-font-smoothing: grayscale;
 } */
 
+/* .page_locked {
+  overflow: hidden;
+} */
 .page_locked {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 /* рэппер для всех структурных блоков страницы (хедер, мейн и футер), в нем
   оверфлоу хидден, чтобы не было горизонтального скролла. */

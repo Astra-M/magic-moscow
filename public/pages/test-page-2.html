@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <!doctype html>
+  <html lang="ru">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- Заменить тайтл, дескрипшн, рел каноникал -->
+      <title>Тест</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet"
+      />
+
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+      />
+
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+      />
+      <link rel="stylesheet" href="/tw-styles.css" />
+    </head>
+    <body>
+      <nav
+        id="testAccordion"
+        class="w-64 rounded-lg border bg-white p-4 font-sans shadow-md"
+      >
+        <div class="border-b py-2">
+          <a href="#" class="text-gray-700 transition hover:text-blue-600">
+            Главная
+          </a>
+        </div>
+
+        <div class="border-b">
+          <button
+            type="button"
+            class="accordion-toggle flex w-full items-center justify-between py-2 text-left text-gray-700 transition hover:text-blue-600"
+          >
+            <span>Экскурсии</span>
+            <svg
+              class="accordion-arrow h-5 w-5 transform transition-transform"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            class="accordion-content max-h-0 overflow-hidden transition-all duration-300"
+          >
+            <div class="space-y-1 pb-2 pl-4">
+              <a
+                href="#"
+                class="block py-1 text-sm text-gray-600 transition hover:text-blue-500"
+              >
+                По центру Москвы
+              </a>
+              <a
+                href="#"
+                class="block py-1 text-sm text-gray-600 transition hover:text-blue-500"
+              >
+                По музеям Кремля
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="py-2">
+          <a href="#" class="text-gray-700 transition hover:text-blue-600">
+            Контакты
+          </a>
+        </div>
+      </nav>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const toggleButton = document.querySelector(".accordion-toggle");
+          const content = document.querySelector(".accordion-content");
+          const arrow = document.querySelector(".accordion-arrow");
+
+          toggleButton.addEventListener("click", function () {
+            const isOpen = content.classList.contains("max-h-40");
+
+            if (isOpen) {
+              content.classList.remove("max-h-40");
+              arrow.classList.remove("rotate-180");
+            } else {
+              content.classList.add("max-h-40");
+              arrow.classList.add("rotate-180");
+            }
+          });
+        });
+      </script>
+    </body>
+  </html>
+</html>
