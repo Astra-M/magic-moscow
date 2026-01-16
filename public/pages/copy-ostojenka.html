@@ -116,29 +116,26 @@
           />
         </a>
 
-        <div
-          class="burger relative z-10 ml-auto h-10 w-12 cursor-pointer min-[805px]:hidden"
-        >
+        <div class="burger h-10 w-12 cursor-pointer min-[805px]:hidden">
           <span class="burger__line"></span>
           <span class="burger__line"></span>
           <span class="burger__line"></span>
         </div>
 
         <!-- <div
-          class="mobile-menu fixed left-[-100%] top-0 flex min-h-screen w-full items-center justify-center overflow-hidden bg-fuchsia-brand transition-all duration-500"
-        > -->
-        <!-- <div
-          class="mobile-menu fixed left-[-100%] top-0 flex min-h-screen w-full overflow-hidden bg-fuchsia-brand transition-all duration-500"
-        > -->
-        <!-- <div
-          class="mobile-menu fixed left-[-100%] top-0 flex min-h-screen w-full bg-fuchsia-brand transition-all duration-500"
+          class="mobile-menu fixed left-[-100%] top-0 h-screen w-full overflow-y-auto bg-fuchsia-brand transition-all duration-500"
         > -->
         <div
-          class="mobile-menu fixed left-[-100%] top-0 h-screen w-full overflow-y-auto bg-fuchsia-brand transition-all duration-500"
+          class="mobile-menu fixed left-[-100%] top-0 h-screen w-full bg-fuchsia-brand transition-all duration-500"
         >
-          <ul class="flex w-full flex-col gap-1 pt-20">
-            <!-- <div class="mobile-menu fixed inset-0 bg-fuchsia-brand">
-          <ul class="flex flex-col gap-1 p-4"> -->
+          <div
+            class="mobile-menu__header fixed left-0 right-0 top-0 z-50 hidden h-16 bg-fuchsia-brand py-10"
+          ></div>
+
+          <!-- <ul class="z-0 flex w-full flex-col gap-1 overflow-y-auto pb-8 pt-24"> -->
+          <ul
+            class="mobile-menu__list z-0 flex h-full w-full flex-col gap-1 overflow-y-auto pb-8 pt-24"
+          >
             <li class="text-left">
               <a href="/" class="inline-block px-6 py-3 text-2xl text-white">
                 <span class="inline-block">
