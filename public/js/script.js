@@ -13,8 +13,8 @@ burger.addEventListener("click", () => {
   page.classList.toggle("page_locked");
 });
 
-mobileList.addEventListener("scroll", () => {
-  mobileHeader.classList.toggle("shadow-md", mobileList.scrollTop > 0);
+mobileMenu.addEventListener("scroll", () => {
+  mobileHeader.classList.toggle("shadow-md", mobileMenu.scrollTop > 0);
 });
 
 toggleButtons.forEach((button) => {
